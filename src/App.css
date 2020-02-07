@@ -1,6 +1,8 @@
 html, body, div {
     width: 100%;
     height: 100%;
+    font-family: "Maiandra GD", serif;
+    /*color: #116661;*/
 }
 
 p {
@@ -23,9 +25,17 @@ p {
     border-bottom: #116661 solid;
 }
 
+.nav-link:active {
+    background-color: #F7FFFF;
+}
+
 .nav-link-parent {
     border: none;
     padding-left: 0;
+}
+
+.nav-link-parent:active {
+    background-color: #A7B8B5;
 }
 
 .nav-link-child {
@@ -40,7 +50,6 @@ p {
 
 .brand {
     font-size: x-large;
-    font-family: "Maiandra GD", serif;
     color: white;
     font-weight: bolder;
 }
@@ -52,4 +61,51 @@ p {
 
 .page {
     background-color: #F7FFFF;
+    padding: 5%;
+    display: flex;
+    flex-direction: row;
+}
+
+.main {
+    width: 80%;
+}
+
+.table-title {
+    text-align: center;
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+.thead {
+    background-color: #116661;
+}
+
+.tbody {
+    background-color: #C7D8D5;
+}
+
+.sidebar-right {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.btn-primary {
+    height: 15%;
+    background-color: #C7D8D5;
+    border-color: #C7D8D5;
+    margin-bottom: 10%;
+    margin-left: 10%;
+    transition: none;
+    color: black;
+}
+
+.btn-primary:hover {
+    background-color: #116661;
+    border-color: #116661;
+}
+
+.btn:focus {
+    box-shadow: none  !important;
 }
