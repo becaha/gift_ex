@@ -9,18 +9,29 @@ p {
 }
 
 .sidebar {
-    background-color: darkseagreen;
+    background-color: #A7B8B5;
     width: 20%;
     height: 100%;
 }
 
 .navbar {
-    background-color: darkslategrey;
+    background-color: #116661;
 }
 
 .nav-link {
     color: black;
-    /*border-bottom: black solid;*/
+    border-bottom: #116661 solid;
+}
+
+.nav-link-parent {
+    border: none;
+    padding-left: 0;
+}
+
+.nav-link-child {
+    background-color: #C7D8D5;
+    border-bottom: #116661 solid;
+    padding-left: 17%;
 }
 
 .nav-link:hover {
@@ -32,4 +43,13 @@ p {
     font-family: "Maiandra GD", serif;
     color: white;
     font-weight: bolder;
+}
+
+.screen {
+    display: flex;
+    flex-direction: row;
+}
+
+.page {
+    background-color: #F7FFFF;
 }

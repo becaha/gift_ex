@@ -20,15 +20,21 @@ function App() {
               {/*/>*/}
               <Navbar.Brand href="#home"><p className="brand" >GiftEx</p></Navbar.Brand>
           </Navbar>
-          <div className="sidebar">
-              <Nav defaultActiveKey="/home" className="flex-column">
-                  <Nav.Link className="nav-link" href="/home">Jones Family</Nav.Link>
-                  <Nav.Link className="nav-link">Wishlists
-                      <Nav.Link href='#' className="nav-link">Sarah Jones</Nav.Link>
-                      <Nav.Link href='#' className="nav-link">Mike Jones</Nav.Link>
-                      <Nav.Link href='#' className="nav-link">Mo Jones</Nav.Link>
-                  </Nav.Link>
-              </Nav>
+          <div className="screen">
+              <div className="sidebar">
+                  <Nav defaultActiveKey="/home" className="flex-column">
+                      <Nav.Link href="/home">Jones Family</Nav.Link>
+                      <Nav.Link href="#">Wishlists</Nav.Link>
+                      <Nav.Link className="nav-link-parent" style={{paddingTop: 0, paddingBottom: 0, paddingRight: 0}}>
+                          <Nav.Link className="nav-link-child" href='#'>Sarah Jones</Nav.Link>
+                          <Nav.Link className="nav-link-child" href='#'>Mike Jones</Nav.Link>
+                          <Nav.Link className="nav-link-child" href='#'>Mo Jones</Nav.Link>
+                      </Nav.Link>
+                  </Nav>
+              </div>
+              <div className="page">
+
+              </div>
           </div>
       </div>
   );
