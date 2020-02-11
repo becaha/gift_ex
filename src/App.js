@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { LogoHeader } from './LogoHeader.js';
 import { Sidebar } from './Sidebar.js';
-import {GroupExchange} from "./GroupExchange";
+import {Router} from "./Router.js";
 
 function App() {
   return (
@@ -10,7 +10,8 @@ function App() {
           <LogoHeader/>
           <div className="screen">
               <Sidebar/>
-              <GroupExchange/>
+              {/*<GroupExchange/>*/}
+              {/*<Router/>*/}
           </div>
       </div>
   );

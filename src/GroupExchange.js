@@ -2,7 +2,14 @@ import React from 'react';
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
 
+// window.$members = [];
+
 export class GroupExchange extends React.Component {
+
+    // addMember(name) {
+    //     this.members.push(name);
+    // }
+
     render() {
         return <div className="page">
             <div className="main">
@@ -46,8 +53,8 @@ export class GroupExchange extends React.Component {
             </div>
             <div className="sidebar-right">
                 <Button>Next Year</Button>
-                <Button>Add Member</Button>
-                <Button>Delete Member</Button>
+                {/*<Button>Add Member</Button>*/}
+                {/*<Button>Delete Member</Button>*/}
             </div>
         </div>;
     }
