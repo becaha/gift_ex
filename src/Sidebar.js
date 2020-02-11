@@ -20,11 +20,11 @@ export class Sidebar extends React.Component {
         console.log('Group');
     }
 
-    setWishlistPage() {
+    setWishlistPage(e, name) {
         this.setState({
             page: 'Wishlist'
         });
-        console.log('Wish');
+        console.log('Wish', name);
     }
 
 
@@ -54,9 +54,9 @@ export class Sidebar extends React.Component {
             <Nav.Link href="/home" onClick={this.setGroupPage}>Jones Family</Nav.Link>
             <Nav.Link href="#">Wishlists</Nav.Link>
             <Nav.Link className="nav-link-parent" style={{paddingTop: 0, paddingBottom: 0, paddingRight: 0}}>
-                <Nav.Link className="nav-link-child" href='#' onClick={this.setWishlistPage}>Sarah Jones</Nav.Link>
-                <Nav.Link className="nav-link-child" href='#' onClick={this.setWishlistPage}>Mike Jones</Nav.Link>
-                <Nav.Link className="nav-link-child" href='#' onClick={this.setWishlistPage}>Mo Jones</Nav.Link>
+                <Nav.Link className="nav-link-child" href='#' onClick={(e) => this.setWishlistPage(e, 'Sarah Jones')}>Sarah Jones</Nav.Link>
+                <Nav.Link className="nav-link-child" href='#' onClick={(e) => this.setWishlistPage(e, 'Mike Jones')}>Mike Jones</Nav.Link>
+                <Nav.Link className="nav-link-child" href='#' onClick={(e) => this.setWishlistPage(e, 'Mo Jones')}>Mo Jones</Nav.Link>
             </Nav.Link>
         </Nav>
         </div>
