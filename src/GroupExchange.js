@@ -11,6 +11,7 @@ export class GroupExchange extends React.Component {
     // }
 
     render() {
+        console.log('Group render');
         return <div className="page">
             <div className="main">
                 <Table bordered>

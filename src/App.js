@@ -8,11 +8,9 @@ function App() {
   return (
       <div>
           <LogoHeader/>
-          <div className="screen">
               <Sidebar/>
               {/*<GroupExchange/>*/}
               {/*<Router/>*/}
-          </div>
       </div>
   );
 }
