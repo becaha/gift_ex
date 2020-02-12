@@ -1,27 +1,27 @@
 import React from 'react';
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
-import InputGroup from "react-bootstrap/InputGroup";
 import FormControl from "react-bootstrap/FormControl";
 import trash_icon from "./assets/trash_icon.png";
 
 export class GroupExchange extends React.Component {
     constructor(props){
         super(props);
-        this.state = {year: 2020, memberForm: null};
+        this.state = {year: 2020, memberForm: null, members: props.members};
         this.nextYear = this.nextYear.bind(this);
         this.prevYear = this.prevYear.bind(this);
         this.closeMemberForm = this.closeMemberForm.bind(this);
         this.openMemberForm = this.openMemberForm.bind(this);
         this.handleNewMember = this.handleNewMember.bind(this);
         this.handleChange = this.handleChange.bind(this);
+        this.deleteMember = this.deleteMember.bind(this);
         this.createAssignments = this.createAssignments.bind(this);
         this.exchangeIndex = 1;
         this.newMember = null;
     }
 
     nextYear() {
-        this.exchangeIndex = (this.exchangeIndex + 1) % this.props.members.length;
+        this.exchangeIndex = (this.exchangeIndex + 1) % this.state.members.length;
         if(this.exchangeIndex === 0) {
             this.exchangeIndex = 1;
         }
@@ -29,11 +29,10 @@ export class GroupExchange extends React.Component {
     }
 
     prevYear() {
-        this.exchangeIndex = (this.exchangeIndex - 1) % this.props.members.length;
+        this.exchangeIndex = (this.exchangeIndex - 1) % this.state.members.length;
         if(this.exchangeIndex === 0) {
-            this.exchangeIndex = this.props.members.length - 1;
+            this.exchangeIndex = this.state.members.length - 1;
         }
-        console.log(this.exchangeIndex);
         this.setState({year: this.state.year - 1});
     }
 
@@ -56,26 +55,29 @@ export class GroupExchange extends React.Component {
     }
 
     handleChange(event) {
-        console.log(event);
         this.newMember = event.target.value;
-        console.log('change', this.newMember);
     }
 
     handleNewMember() {
-        console.log('new member', this.newMember);
-        this.props.members.push(this.newMember);
+        this.state.members.push(this.newMember);
         this.newMember = null;
         this.closeMemberForm();
     }
 
+    deleteMember(e, removeMember) {
+        let updatedMembers = this.state.members.filter(member =>
+           removeMember !== member
+        );
+        this.setState({members: updatedMembers});
+    }
+
     createAssignments() {
-        const memberAssignments = this.props.members.map((member, index) => {
-            let exIndex = (index + this.exchangeIndex) % this.props.members.length;
-            console.log(index, exIndex, this.props.members.length);
+        const memberAssignments = this.state.members.map((member, index) => {
+            let exIndex = (index + this.exchangeIndex) % this.state.members.length;
             return (
                 <tr>
                     <td>{member}</td>
-                    <td>{this.props.members[exIndex]}</td>
+                    <td>{this.state.members[exIndex]}</td>
                 </tr>
             )
         });
@@ -87,10 +89,14 @@ export class GroupExchange extends React.Component {
 
         const memberAssignments = this.createAssignments();
 
-        const rowMembers = this.props.members.map(member => {
+        const rowMembers = this.state.members.map(member => {
             return (
                 <tr>
-                    <td>{member}<Button className="btn-table btn-delete"><img className="icon" src={trash_icon} alt="X"/></Button></td>
+                    <td>{member}
+                        <Button className="btn-table btn-delete" onClick={(e) => this.deleteMember(e, member)}>
+                            <img className="icon" src={trash_icon} alt="X"/>
+                        </Button>
+                    </td>
                 </tr>
             )
         });
