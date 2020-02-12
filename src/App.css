@@ -135,13 +135,22 @@ input:hover{
     border-color: #116661;
 }
 
-
 .btn-table{
     margin: 0;
     padding: 1%;
+    alignment: center;
+}
+
+.btn-delete {
+    float: right;
+    font-family: sans-serif;
 }
 
 .btn:focus, input:focus {
     box-shadow: none  !important;
+}
+
+.icon {
+    width: 35%;
 }
 

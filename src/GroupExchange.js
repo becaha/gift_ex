@@ -3,6 +3,7 @@ import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
 import InputGroup from "react-bootstrap/InputGroup";
 import FormControl from "react-bootstrap/FormControl";
+import trash_icon from "./assets/trash_icon.png";
 
 export class GroupExchange extends React.Component {
     constructor(props){
@@ -89,7 +90,7 @@ export class GroupExchange extends React.Component {
         const rowMembers = this.props.members.map(member => {
             return (
                 <tr>
-                    <td>{member}</td>
+                    <td>{member}<Button className="btn-table btn-delete"><img className="icon" src={trash_icon} alt="X"/></Button></td>
                 </tr>
             )
         });
@@ -139,7 +140,6 @@ export class GroupExchange extends React.Component {
                 </div>
                 <div className="sidebar-right">
                     <Button onClick={this.openMemberForm}>Add Member {this.state.memberForm}</Button>
-                    <Button>Delete Member</Button>
                 </div>
             </div>
             </div>;
