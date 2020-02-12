@@ -1,13 +1,17 @@
 import React from 'react';
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
+import InputGroup from "react-bootstrap/InputGroup";
+import FormControl from "react-bootstrap/FormControl";
 
 export class GroupExchange extends React.Component {
     constructor(props){
         super(props);
-        this.state = {year: 2020};
+        this.state = {year: 2020, memberForm: null};
         this.nextYear = this.nextYear.bind(this);
         this.prevYear = this.prevYear.bind(this);
+        this.openMemberForm = this.openMemberForm.bind(this);
+        this.handleNewMember = this.handleNewMember.bind(this);
         this.exchangeIndex = 1;
     }
 
@@ -28,9 +32,24 @@ export class GroupExchange extends React.Component {
         this.setState({year: this.state.year - 1});
     }
 
-    // addMember(name) {
-    //     this.members.push(name);
-    // }
+    openMemberForm() {
+        if (this.state.memberForm === null) {
+            this.setState({memberForm: (<FormControl
+                placeholder="Member Name"
+                aria-label="Member Name"
+                aria-describedby="basic-addon1"
+                onSubmit={this.handleNewMember}
+            />)});
+        }
+        // else {
+        //     this.setState({memberForm: null});
+        // }
+    }
+
+    handleNewMember(event) {
+        console.log('new member name', event.target.value);
+        this.members.push(event.target.value);
+    }
 
     createAssignments() {
         const memberAssignments = this.props.members.map((member, index) => {
@@ -51,15 +70,22 @@ export class GroupExchange extends React.Component {
 
         const memberAssignments = this.createAssignments();
 
-        return <div className="page">
+        const rowMembers = this.props.members.map(member => {
+            return (
+                <tr>
+                    <td>{member}</td>
+                </tr>
+            )
+        });
+
+        return <div>
+            <div className="page page-main">
             <div className="main">
                 <Table bordered>
                     <thead className="thead">
-                    <tr className="table-title">
-                        <th colSpan="2">
-                            <Button className="btn-table" onClick={this.prevYear}>Previous Year</Button>
+                    <tr>
+                        <th colSpan="2" className="table-title">
                             {this.props.groupName.toUpperCase()} EXCHANGE {this.state.year}
-                            <Button className="btn-table" onClick={this.nextYear}>Next Year</Button>
                         </th>
                     </tr>
                     <tr>
@@ -78,6 +104,28 @@ export class GroupExchange extends React.Component {
                 {/*<Button>Add Member</Button>*/}
                 {/*<Button>Delete Member</Button>*/}
             </div>
-        </div>;
+
+        </div>
+            <div className="page">
+                <div className="main">
+                <Table bordered>
+                    <thead className="thead">
+                    <tr>
+                        <th colSpan="2" className="table-title">
+                            {this.props.groupName} Members
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody className="tbody">
+                    {rowMembers}
+                    </tbody>
+                </Table>
+                </div>
+                <div className="sidebar-right">
+                    <Button onClick={this.openMemberForm}>Add Member {this.state.memberForm}</Button>
+                    <Button>Delete Member</Button>
+                </div>
+            </div>
+            </div>;
     }
 }

@@ -1,4 +1,9 @@
+html {
+    overflow: auto;
+}
+
 html, body, div {
+    box-sizing:border-box;
     width: 100%;
     height: 100%;
     font-family: "Maiandra GD", serif;
@@ -27,6 +32,14 @@ p {
 
 .nav-link:active {
     background-color: #F7FFFF;
+}
+
+.no-link:active {
+    background-color: #A7B8B5;
+}
+
+.no-link:hover {
+    cursor: default;
 }
 
 .nav-link-parent {
@@ -64,16 +77,15 @@ p {
     padding: 5%;
     display: flex;
     flex-direction: row;
+    height: 40%;
+}
+
+.page-main {
+    height: 60%;
 }
 
 .main {
     width: 80%;
-}
-
-.table-head {
-    text-align: center;
-    font-weight: bolder;
-    font-size: x-large;
 }
 
 .thead {
@@ -84,9 +96,10 @@ p {
     background-color: #C7D8D5;
 }
 
-.btn-table{
-    margin: 0 !important;
-    padding: 0;
+.table-title {
+    text-align: center;
+    font-weight: bolder;
+    font-size: x-large;
 }
 
 .sidebar-right {
@@ -96,8 +109,15 @@ p {
     justify-content: flex-start;
 }
 
+input {
+    background-color: #C7D8D5;
+    border-color: #C7D8D5;
+    transition: none;
+    color: black;
+}
+
 .btn-primary {
-    height: 15%;
+    /*height: 15%;*/
     background-color: #C7D8D5;
     border-color: #C7D8D5;
     margin-bottom: 10%;
@@ -111,6 +131,17 @@ p {
     border-color: #116661;
 }
 
-.btn:focus {
+input:hover{
+    border-color: #116661;
+}
+
+
+.btn-table{
+    margin: 0;
+    padding: 1%;
+}
+
+.btn:focus, input:focus {
     box-shadow: none  !important;
 }
+

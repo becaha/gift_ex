@@ -44,7 +44,7 @@ export class Screen extends React.Component {
         <div className="sidebar">
             <Nav defaultActiveKey="/home" className="flex-column">
             <Nav.Link href="/home" onClick={this.setGroupPage}>{this.props.groupName}</Nav.Link>
-            <Nav.Link href="#">Wishlists</Nav.Link>
+            <Nav.Link className="no-link">Wishlists</Nav.Link>
             <Nav.Link className="nav-link-parent" style={{paddingTop: 0, paddingBottom: 0, paddingRight: 0}}>
                 {navLinks}
             </Nav.Link>
