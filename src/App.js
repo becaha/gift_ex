@@ -1,18 +1,16 @@
 import React from 'react';
 import './App.css';
 import { LogoHeader } from './LogoHeader.js';
-import { Sidebar } from './Sidebar.js';
-import {Router} from "./Router.js";
+import { Screen } from './Screen.js';
 
 function App() {
-  return (
+    const members = ['Sarah Jones', 'Mike Jones', 'Mo Jones'];
+    return (
       <div>
           <LogoHeader/>
-              <Sidebar/>
-              {/*<GroupExchange/>*/}
-              {/*<Router/>*/}
+              <Screen members={members}/>
       </div>
-  );
+    );
 }
 
 export default App;

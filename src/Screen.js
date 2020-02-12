@@ -5,12 +5,14 @@ import {GroupExchange} from "./GroupExchange";
 import {Wishlist} from "./Wishlist";
 import './App.css';
 
-export class Sidebar extends React.Component {
+export class Screen extends React.Component {
+
     constructor(props) {
         super(props);
         this.state = {page: 'GroupExchange'};
         this.setWishlistPage = this.setWishlistPage.bind(this);
         this.setGroupPage = this.setGroupPage.bind(this);
+        this.person = null;
     }
 
     setGroupPage() {
@@ -25,24 +27,14 @@ export class Sidebar extends React.Component {
             page: 'Wishlist'
         });
         console.log('Wish', name);
+        this.person = name
     }
 
-
-
-    // onWishlistClick(name) {
-    //     // this.setWishlistPage();
-    // }
-    //
-    // onGroupClick() {
-    //     // this.setGroupPage();
-    // }
-
     render() {
-        console.log('Sidebar render');
-        const members = ['Jo Jones', 'Carrie Jones', 'Piper Jones', 'Marie Jones', 'Arty Jones', 'Sally Jones', 'Callie Jones', 'Chris Jones'];
-        const navLinks = members.map(member => {
+        console.log('Screen render', this.props.members);
+        const navLinks = this.props.members.map(member => {
             return (
-                <Nav.Link className="nav-link-child" href={'/' + member}>
+                <Nav.Link className="nav-link-child" onClick={(e) => this.setWishlistPage(e, member)}>
                     {member}
                 </Nav.Link>
             )
@@ -54,14 +46,12 @@ export class Sidebar extends React.Component {
             <Nav.Link href="/home" onClick={this.setGroupPage}>Jones Family</Nav.Link>
             <Nav.Link href="#">Wishlists</Nav.Link>
             <Nav.Link className="nav-link-parent" style={{paddingTop: 0, paddingBottom: 0, paddingRight: 0}}>
-                <Nav.Link className="nav-link-child" href='#' onClick={(e) => this.setWishlistPage(e, 'Sarah Jones')}>Sarah Jones</Nav.Link>
-                <Nav.Link className="nav-link-child" href='#' onClick={(e) => this.setWishlistPage(e, 'Mike Jones')}>Mike Jones</Nav.Link>
-                <Nav.Link className="nav-link-child" href='#' onClick={(e) => this.setWishlistPage(e, 'Mo Jones')}>Mo Jones</Nav.Link>
+                {navLinks}
             </Nav.Link>
         </Nav>
         </div>
             {/*<Router page={this.state.page} person={this.props.person}/>*/}
-            <Router page={this.state.page}/>
+            <Router page={this.state.page} members={this.props.members} person={this.person}/>
         </div>;
 
     }
