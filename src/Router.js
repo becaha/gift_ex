@@ -8,7 +8,7 @@ export class Router extends React.Component {
         console.log('Router render');
         const page = this.props.page || 'GroupExchange';
         if (page === 'GroupExchange') {
-            return <GroupExchange members={this.props.members}/>;
+            return <GroupExchange members={this.props.members} groupName={this.props.groupName}/>;
         }
         else {
             return <Wishlist members={this.props.members} person={this.props.person}/>;

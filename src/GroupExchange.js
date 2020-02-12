@@ -1,9 +1,6 @@
 import React from 'react';
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
-import Nav from "react-bootstrap/Nav";
-
-// window.$members = [];
 
 export class GroupExchange extends React.Component {
     constructor(props){
@@ -50,15 +47,20 @@ export class GroupExchange extends React.Component {
     }
 
     render() {
+        console.log('Group render');
+
         const memberAssignments = this.createAssignments();
 
-        console.log('Group render');
         return <div className="page">
             <div className="main">
                 <Table bordered>
                     <thead className="thead">
                     <tr className="table-title">
-                        <th colSpan="2">FAMILY EXCHANGE {this.state.year}</th>
+                        <th colSpan="2">
+                            <Button className="btn-table" onClick={this.prevYear}>Previous Year</Button>
+                            {this.props.groupName.toUpperCase()} EXCHANGE {this.state.year}
+                            <Button className="btn-table" onClick={this.nextYear}>Next Year</Button>
+                        </th>
                     </tr>
                     <tr>
                         <th>GIVER</th>

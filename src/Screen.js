@@ -43,15 +43,14 @@ export class Screen extends React.Component {
         return  <div className="screen">
         <div className="sidebar">
             <Nav defaultActiveKey="/home" className="flex-column">
-            <Nav.Link href="/home" onClick={this.setGroupPage}>Jones Family</Nav.Link>
+            <Nav.Link href="/home" onClick={this.setGroupPage}>{this.props.groupName}</Nav.Link>
             <Nav.Link href="#">Wishlists</Nav.Link>
             <Nav.Link className="nav-link-parent" style={{paddingTop: 0, paddingBottom: 0, paddingRight: 0}}>
                 {navLinks}
             </Nav.Link>
         </Nav>
         </div>
-            {/*<Router page={this.state.page} person={this.props.person}/>*/}
-            <Router page={this.state.page} members={this.props.members} person={this.person}/>
+            <Router page={this.state.page} groupName={this.props.groupName} members={this.props.members} person={this.person}/>
         </div>;
 
     }
