@@ -10,9 +10,13 @@ export class GroupExchange extends React.Component {
         this.state = {year: 2020, memberForm: null};
         this.nextYear = this.nextYear.bind(this);
         this.prevYear = this.prevYear.bind(this);
+        this.closeMemberForm = this.closeMemberForm.bind(this);
         this.openMemberForm = this.openMemberForm.bind(this);
         this.handleNewMember = this.handleNewMember.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.createAssignments = this.createAssignments.bind(this);
         this.exchangeIndex = 1;
+        this.newMember = null;
     }
 
     nextYear() {
@@ -32,23 +36,35 @@ export class GroupExchange extends React.Component {
         this.setState({year: this.state.year - 1});
     }
 
+    closeMemberForm() {
+        this.setState({memberForm: null});
+    }
+
     openMemberForm() {
         if (this.state.memberForm === null) {
-            this.setState({memberForm: (<FormControl
+            this.setState({memberForm: (<div>
+                    <FormControl
                 placeholder="Member Name"
                 aria-label="Member Name"
                 aria-describedby="basic-addon1"
-                onSubmit={this.handleNewMember}
-            />)});
+                onChange={e => this.handleChange(e)}
+            />
+            <Button onClick={this.handleNewMember}>></Button>
+            </div>)});
         }
-        // else {
-        //     this.setState({memberForm: null});
-        // }
     }
 
-    handleNewMember(event) {
-        console.log('new member name', event.target.value);
-        this.members.push(event.target.value);
+    handleChange(event) {
+        console.log(event);
+        this.newMember = event.target.value;
+        console.log('change', this.newMember);
+    }
+
+    handleNewMember() {
+        console.log('new member', this.newMember);
+        this.props.members.push(this.newMember);
+        this.newMember = null;
+        this.closeMemberForm();
     }
 
     createAssignments() {
