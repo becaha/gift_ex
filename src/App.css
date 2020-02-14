@@ -5,7 +5,6 @@ html {
 html, body, div {
     box-sizing:border-box;
     width: 100%;
-    height: 100%;
     font-family: "Maiandra GD", serif;
     /*color: #116661;*/
 }
@@ -18,7 +17,11 @@ p {
 .sidebar {
     background-color: #A7B8B5;
     width: 20%;
-    height: 100%;
+}
+
+.sidebar-content {
+    position: sticky;
+    top: 0;
 }
 
 .navbar {
@@ -75,13 +78,9 @@ p {
 .page {
     background-color: #F7FFFF;
     padding: 5%;
+    padding-bottom: 1%;
     display: flex;
     flex-direction: row;
-    height: 40%;
-}
-
-.page-main {
-    height: 60%;
 }
 
 .main {
@@ -117,7 +116,6 @@ input {
 }
 
 .btn-primary {
-    /*height: 15%;*/
     background-color: #C7D8D5;
     border-color: #C7D8D5;
     margin-bottom: 10%;

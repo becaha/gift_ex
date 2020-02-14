@@ -9,7 +9,6 @@ export class Screen extends React.Component {
 
     constructor(props) {
         super(props);
-        // const members = ['Sarah Jones', 'Mike Jones', 'Mo Jones'];
         this.state = {page: 'GroupExchange', members: props.members};
         this.setWishlistPage = this.setWishlistPage.bind(this);
         this.setGroupPage = this.setGroupPage.bind(this);
@@ -48,17 +47,17 @@ export class Screen extends React.Component {
         });
 
         return  <div className="screen">
-        <div className="sidebar">
-            <Nav className="flex-column">
-            <Nav.Link onClick={this.setGroupPage}>{this.props.groupName}</Nav.Link>
-            <Nav.Link className="no-link">Wishlists</Nav.Link>
-            <Nav.Link className="nav-link-parent" style={{paddingTop: 0, paddingBottom: 0, paddingRight: 0}}>
-                {navLinks}
-            </Nav.Link>
-        </Nav>
-        </div>
-            <Router page={this.state.page} groupName={this.props.groupName} person={this.person} members={this.state.members} setMembers={(m) => this.setMembers(m)}/>
-        </div>;
+                    <div className="sidebar">
+                        <Nav className="flex-column sidebar-content">
+                            <Nav.Link onClick={this.setGroupPage}>{this.props.groupName}</Nav.Link>
+                            <Nav.Link className="no-link">Wishlists</Nav.Link>
+                            <Nav.Link className="nav-link-parent" style={{paddingTop: 0, paddingBottom: 0, paddingRight: 0}}>
+                                {navLinks}
+                            </Nav.Link>
+                        </Nav>
+                    </div>
+                    <Router page={this.state.page} groupName={this.props.groupName} person={this.person} members={this.state.members} setMembers={(m) => this.setMembers(m)}/>
+                </div>;
 
     }
 }
