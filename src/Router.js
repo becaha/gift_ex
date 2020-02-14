@@ -11,12 +11,14 @@ export class Router extends React.Component {
 
     render() {
         console.log('router render', this.members);
+        console.log('props',this.props);
         const page = this.props.page || 'GroupExchange';
         if (page === 'GroupExchange') {
             return <GroupExchange members={this.members} groupName={this.props.groupName} setMembers={(m) => this.props.setMembers(m)}/>;
         }
         else {
-            return <Wishlist members={this.members} person={this.props.person} setMembers={(m) => this.props.setMembers(m)}/>;
+            var list = this.props.lists[this.props.person];
+            return <Wishlist members={this.members} person={this.props.person} list={list} setMembers={(m) => this.props.setMembers(m)}/>;
         }
     }
 }

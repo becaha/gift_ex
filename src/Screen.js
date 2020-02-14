@@ -45,7 +45,6 @@ export class Screen extends React.Component {
                 </Nav.Link>
             )
         });
-
         return  <div className="screen">
                     <div className="sidebar">
                         <Nav className="flex-column sidebar-content">
@@ -56,7 +55,7 @@ export class Screen extends React.Component {
                             </Nav.Link>
                         </Nav>
                     </div>
-                    <Router page={this.state.page} groupName={this.props.groupName} person={this.person} members={this.state.members} setMembers={(m) => this.setMembers(m)}/>
+                    <Router page={this.state.page} groupName={this.props.groupName} person={this.person} members={this.state.members} lists={this.props.giftLists} setMembers={(m) => this.setMembers(m)}/>
                 </div>;
 
     }
