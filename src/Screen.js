@@ -9,10 +9,17 @@ export class Screen extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {page: 'GroupExchange'};
+        // const members = ['Sarah Jones', 'Mike Jones', 'Mo Jones'];
+        this.state = {page: 'GroupExchange', members: props.members};
         this.setWishlistPage = this.setWishlistPage.bind(this);
         this.setGroupPage = this.setGroupPage.bind(this);
+        this.setMembers = this.setMembers.bind(this);
         this.person = null;
+    }
+
+    setMembers(newMembers) {
+        console.log('screen set members', newMembers);
+        this.setState({members: newMembers});
     }
 
     setGroupPage() {
@@ -31,8 +38,8 @@ export class Screen extends React.Component {
     }
 
     render() {
-        console.log('Screen render', this.props.members);
-        const navLinks = this.props.members.map(member => {
+        console.log('Screen render', this.state.members);
+        const navLinks = this.state.members.map(member => {
             return (
                 <Nav.Link className="nav-link-child" onClick={(e) => this.setWishlistPage(e, member)}>
                     {member}
@@ -42,15 +49,15 @@ export class Screen extends React.Component {
 
         return  <div className="screen">
         <div className="sidebar">
-            <Nav defaultActiveKey="/home" className="flex-column">
-            <Nav.Link href="/home" onClick={this.setGroupPage}>{this.props.groupName}</Nav.Link>
+            <Nav className="flex-column">
+            <Nav.Link onClick={this.setGroupPage}>{this.props.groupName}</Nav.Link>
             <Nav.Link className="no-link">Wishlists</Nav.Link>
             <Nav.Link className="nav-link-parent" style={{paddingTop: 0, paddingBottom: 0, paddingRight: 0}}>
                 {navLinks}
             </Nav.Link>
         </Nav>
         </div>
-            <Router page={this.state.page} groupName={this.props.groupName} members={this.props.members} person={this.person}/>
+            <Router page={this.state.page} groupName={this.props.groupName} person={this.person} members={this.state.members} setMembers={(m) => this.setMembers(m)}/>
         </div>;
 
     }

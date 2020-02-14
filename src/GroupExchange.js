@@ -7,6 +7,8 @@ import trash_icon from "./assets/trash_icon.png";
 export class GroupExchange extends React.Component {
     constructor(props){
         super(props);
+        console.log(props.members);
+        this.members = props.members;
         this.state = {year: 2020, memberForm: null, members: props.members};
         this.nextYear = this.nextYear.bind(this);
         this.prevYear = this.prevYear.bind(this);
@@ -18,6 +20,11 @@ export class GroupExchange extends React.Component {
         this.createAssignments = this.createAssignments.bind(this);
         this.exchangeIndex = 1;
         this.newMember = null;
+        this.setMembers = this.setMembers.bind(this);
+    }
+
+    setMembers(newMembers) {
+        this.props.setMembers(newMembers);
     }
 
     nextYear() {
@@ -62,6 +69,7 @@ export class GroupExchange extends React.Component {
         this.state.members.push(this.newMember);
         this.newMember = null;
         this.closeMemberForm();
+        this.setMembers(this.state.members);
     }
 
     deleteMember(e, removeMember) {
@@ -69,6 +77,7 @@ export class GroupExchange extends React.Component {
            removeMember !== member
         );
         this.setState({members: updatedMembers});
+        this.setMembers(updatedMembers);
     }
 
     createAssignments() {
@@ -85,7 +94,7 @@ export class GroupExchange extends React.Component {
     }
 
     render() {
-        console.log('Group render');
+        console.log('Group render', this.state.members);
 
         const memberAssignments = this.createAssignments();
 

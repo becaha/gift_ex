@@ -4,12 +4,13 @@ import { LogoHeader } from './LogoHeader.js';
 import { Screen } from './Screen.js';
 
 function App() {
+    console.log('app');
     const members = ['Sarah Jones', 'Mike Jones', 'Mo Jones'];
     const groupName = 'Jones Family';
     return (
       <div>
           <LogoHeader/>
-              <Screen members={members} groupName={groupName}/>
+              <Screen groupName={groupName} members={members}/>
       </div>
     );
 }
