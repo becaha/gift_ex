@@ -1,8 +1,8 @@
 :root{
-    --background-color: #F7ffff;
-    --dark: #116661;
-    --medium: #A7B8B5;
-    --light: #C7D8D5;
+    --dark-mode-background-color: #222222;
+    --dark-mode-dark: #116661;
+    --dark-mode-medium: #A7B8B5;
+    --dark-mode-light: #116661;
 }
 
 html {
@@ -13,7 +13,7 @@ html, body, div {
     box-sizing:border-box;
     width: 100%;
     font-family: "Maiandra GD", serif;
-    /*color: var(--dark);*/
+    /*color: var(--dark-mode-dark);*/
 }
 
 p {
@@ -22,7 +22,7 @@ p {
 }
 
 .sidebar {
-    background-color: var(--medium);
+    background-color: var(--dark-mode-medium);
     width: 20%;
 }
 
@@ -32,20 +32,20 @@ p {
 }
 
 .navbar {
-    background-color: var(--dark);
+    background-color: var(--dark-mode-dark);
 }
 
 .nav-link {
     color: black;
-    border-bottom: var(--dark) solid;
+    border-bottom: var(--dark-mode-dark) solid;
 }
 
 .nav-link:active {
-    background-color: var(--background-color);
+    background-color: var(--dark-mode-background-color);
 }
 
 .no-link:active {
-    background-color: var(--medium);
+    background-color: var(--dark-mode-medium);
 }
 
 .no-link:hover {
@@ -58,12 +58,12 @@ p {
 }
 
 .nav-link-parent:active {
-    background-color: var(--medium);
+    background-color: var(--dark-mode-medium);
 }
 
 .nav-link-child {
-    background-color: var(--light);
-    border-bottom: var(--dark) solid;
+    background-color: var(--dark-mode-light);
+    border-bottom: var(--dark-mode-dark) solid;
     padding-left: 17%;
 }
 
@@ -83,7 +83,7 @@ p {
 }
 
 .page {
-    background-color: var(--background-color);
+    background-color: var(--dark-mode-background-color);
     padding: 5%;
     padding-bottom: 1%;
     display: flex;
@@ -95,11 +95,11 @@ p {
 }
 
 .thead {
-    background-color: var(--dark);
+    background-color: var(--dark-mode-dark);
 }
 
 .tbody {
-    background-color: var(--light);
+    background-color: var(--dark-mode-light);
 }
 
 .table-title {
@@ -116,15 +116,15 @@ p {
 }
 
 input {
-    background-color: var(--light);
-    border-color: var(--light);
+    background-color: var(--dark-mode-light);
+    border-color: var(--dark-mode-light);
     transition: none;
     color: black;
 }
 
 .btn-primary {
-    background-color: var(--light);
-    border-color: var(--light);
+    background-color: var(--dark-mode-light);
+    border-color: var(--dark-mode-light);
     margin-bottom: 10%;
     margin-left: 10%;
     transition: none;
@@ -132,12 +132,12 @@ input {
 }
 
 .btn-primary:hover {
-    background-color: var(--dark);
-    border-color: var(--dark);
+    background-color: var(--dark-mode-dark);
+    border-color: var(--dark-mode-dark);
 }
 
 input:hover{
-    border-color: var(--dark);
+    border-color: var(--dark-mode-dark);
 }
 
 .btn-table{

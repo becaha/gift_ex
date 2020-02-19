@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from "react-bootstrap/Navbar";
-import MainLogo from "./gift_icon_W.png";
+// import MainLogo from "./gift_icon_W.png";
 
 export class LogoHeader extends React.Component {
     render() {
@@ -14,7 +14,7 @@ export class LogoHeader extends React.Component {
             {/*    className="d-inline-block align-top"*/}
             {/*    alt="logo"*/}
             {/*/>*/}
-            <img src={MainLogo} style={imagestyle}/>
+            {/*<img src={MainLogo} style={imagestyle}/>*/}
             <Navbar.Brand href="#home"><p className="brand" >GiftEx</p></Navbar.Brand>
         </Navbar>;
     }

@@ -3,7 +3,6 @@ import Nav from "react-bootstrap/Nav";
 import {Router} from "./Router";
 import {GroupExchange} from "./GroupExchange";
 import {Wishlist} from "./Wishlist";
-import './App.css';
 
 export class Screen extends React.Component {
 

@@ -1,11 +1,12 @@
 import React from 'react';
-import './App.css';
+// import './App.css';
 import { LogoHeader } from './LogoHeader.js';
 import { Screen } from './Screen.js';
 
+
 function App() {
     console.log('app');
-    
+
     return <Main/>
 }
 
@@ -28,13 +29,13 @@ export class Main extends React.Component{
       textAlign:'center'
     }
     this.changePage = this.changePage.bind(this);
-    this.state = {page:'home', pageContent:(<div><LogoHeader/> 
+    this.state = {page:'home', pageContent:(<div><LogoHeader/>
         <div><p style={mainheading}>Gift Organized</p><div style = {subheading}><p >Keep All those loose documents together</p><button onClick={this.changePage}>LOG IN
         </button></div></div></div>),
       members:['Sarah Jones', 'Mike Jones', 'Mo Jones'],groupName:"Jones Family",
       activityLists: {"Sarah Jones":["Tesla Model X","IPhone 11"],"Mike Jones":["Red Scarf","Cuff Links"]}
     };
-    
+
   }
 
   changePage(){
@@ -44,6 +45,13 @@ export class Main extends React.Component{
       </div>)});
   }
   render(){
+    let darkmode = true;
+    if(darkmode) {
+      require('./DarkApp.css');
+    }
+    else {
+      require('./App.css');
+    }
     return (
       <div>{this.state.pageContent}</div>
     )
