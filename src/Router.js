@@ -8,7 +8,6 @@ export class Router extends React.Component {
         super(props);
         this.members = props.members;
     }
-
     render() {
         console.log('router render', this.members);
         console.log('props',this.props);
@@ -17,8 +16,8 @@ export class Router extends React.Component {
             return <GroupExchange members={this.members} groupName={this.props.groupName} setMembers={(m) => this.props.setMembers(m)}/>;
         }
         else {
-            var list = this.props.lists[this.props.person];
-            return <Wishlist members={this.members} person={this.props.person} list={list} setMembers={(m) => this.props.setMembers(m)}/>;
+            this.list = this.props.lists[this.props.person]
+            return <Wishlist members={this.members} person={this.props.person} list={this.list} setMembers={(m) => this.props.setMembers(m)} setWishLists = {(l)=>this.props.setWishLists(l)}/>;
         }
     }
 }
