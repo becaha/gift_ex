@@ -1,0 +1,86 @@
+:root{
+    --background-color: #F7ffff;
+    --dark: #116661;
+    --medium: #A7B8B5;
+    --light: #C7D8D5;
+}
+
+.btn-dark-mode {
+    background-color: var(--light);
+    color: black;
+}
+
+.sidebar {
+    background-color: var(--medium);
+}
+
+.navbar {
+    background-color: var(--dark);
+}
+
+.nav-link {
+    color: black;
+    border-bottom: var(--dark) solid;
+}
+
+.nav-link-parent {
+    border: none;
+}
+
+.nav-link:active {
+    background-color: var(--background-color);
+}
+
+.no-link:active {
+    background-color: var(--medium);
+}
+
+.nav-link-parent:active {
+    background-color: var(--medium);
+}
+
+.nav-link-child {
+    background-color: var(--light);
+    border-bottom: var(--dark) solid;
+}
+
+.nav-link:hover {
+    color: black;
+}
+
+.brand {
+    color: white;
+}
+
+.page {
+    background-color: var(--background-color);
+}
+
+.thead {
+    background-color: var(--dark);
+}
+
+.tbody {
+    background-color: var(--light);
+}
+
+input {
+    background-color: var(--light);
+    border-color: var(--light);
+    color: black;
+}
+
+.btn-primary {
+    background-color: var(--light);
+    border-color: var(--light);
+    color: black;
+}
+
+.btn-primary:hover {
+    background-color: var(--dark);
+    border-color: var(--dark);
+}
+
+input:hover{
+    border-color: var(--dark);
+}

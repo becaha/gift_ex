@@ -3,32 +3,11 @@
     --dark-mode-dark: #116661;
     --dark-mode-medium: #A7B8B5;
     --dark-mode-light: #82A19B;
-}
-
-html {
-    overflow: auto;
-}
-
-html, body, div {
-    box-sizing:border-box;
-    width: 100%;
-    font-family: "Maiandra GD", serif;
-    /*color: var(--dark-mode-dark);*/
-}
-
-p {
-    padding: 0;
-    margin: 0;
+    --dark-mode-med2: #6e9890;
 }
 
 .sidebar {
-    background-color: var(--dark-mode-medium);
-    width: 20%;
-}
-
-.sidebar-content {
-    position: sticky;
-    top: 0;
+    background-color: var(--dark-mode-light);
 }
 
 .navbar {
@@ -40,6 +19,10 @@ p {
     border-bottom: var(--dark-mode-dark) solid;
 }
 
+.nav-link-parent {
+    border: none;
+}
+
 .nav-link:active {
     background-color: var(--dark-mode-background-color);
 }
@@ -48,23 +31,13 @@ p {
     background-color: var(--dark-mode-medium);
 }
 
-.no-link:hover {
-    cursor: default;
-}
-
-.nav-link-parent {
-    border: none;
-    padding-left: 0;
-}
-
 .nav-link-parent:active {
     background-color: var(--dark-mode-medium);
 }
 
 .nav-link-child {
-    background-color: var(--dark-mode-light);
+    background-color: var(--dark-mode-med2);
     border-bottom: var(--dark-mode-dark) solid;
-    padding-left: 17%;
 }
 
 .nav-link:hover {
@@ -72,26 +45,11 @@ p {
 }
 
 .brand {
-    font-size: x-large;
     color: white;
-    font-weight: bolder;
-}
-
-.screen {
-    display: flex;
-    flex-direction: row;
 }
 
 .page {
     background-color: var(--dark-mode-background-color);
-    padding: 5%;
-    padding-bottom: 1%;
-    display: flex;
-    flex-direction: row;
-}
-
-.main {
-    width: 80%;
 }
 
 .thead {
@@ -102,32 +60,23 @@ p {
     background-color: var(--dark-mode-light);
 }
 
-.table-title {
-    text-align: center;
-    font-weight: bolder;
-    font-size: x-large;
+.table-bordered td, .table-bordered th {
+    border: 1px solid var(--dark-mode-background-color);
 }
 
-.sidebar-right {
-    width: 20%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+.table thead th {
+    border-bottom: 2px solid var(--dark-mode-background-color);
 }
 
 input {
     background-color: var(--dark-mode-light);
     border-color: var(--dark-mode-light);
-    transition: none;
     color: black;
 }
 
 .btn-primary {
     background-color: var(--dark-mode-light);
     border-color: var(--dark-mode-light);
-    margin-bottom: 10%;
-    margin-left: 10%;
-    transition: none;
     color: black;
 }
 
@@ -139,23 +88,3 @@ input {
 input:hover{
     border-color: var(--dark-mode-dark);
 }
-
-.btn-table{
-    margin: 0;
-    padding: 1%;
-    alignment: center;
-}
-
-.btn-delete {
-    float: right;
-    font-family: sans-serif;
-}
-
-.btn:focus, input:focus {
-    box-shadow: none  !important;
-}
-
-.icon {
-    width: 35%;
-}
-
