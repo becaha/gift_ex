@@ -9,16 +9,22 @@ export class Screen extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {page: 'GroupExchange', members: props.members};
+        this.state = {page: 'GroupExchange', members: props.members,list:this.props.giftLists};
         this.setWishlistPage = this.setWishlistPage.bind(this);
         this.setGroupPage = this.setGroupPage.bind(this);
         this.setMembers = this.setMembers.bind(this);
+        this.setWishLists = this.setWishLists.bind(this);
         this.person = null;
     }
 
     setMembers(newMembers) {
         console.log('screen set members', newMembers);
         this.setState({members: newMembers});
+    }
+    setWishLists(newList){
+        var nlist = this.state.list;
+        nlist[this.person] = newList;
+        this.setState({list:nlist})
     }
 
     setGroupPage() {
@@ -55,7 +61,7 @@ export class Screen extends React.Component {
                             </Nav.Link>
                         </Nav>
                     </div>
-                    <Router page={this.state.page} groupName={this.props.groupName} person={this.person} members={this.state.members} lists={this.props.giftLists} setMembers={(m) => this.setMembers(m)}/>
+                    <Router page={this.state.page} groupName={this.props.groupName} person={this.person} members={this.state.members} lists={this.props.giftLists} setMembers={(m) => this.setMembers(m)} setWishLists = {(l)=>this.setWishLists(l)}/>
                 </div>;
 
     }
