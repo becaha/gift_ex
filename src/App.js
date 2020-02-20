@@ -52,7 +52,6 @@ export class Main extends React.Component{
   }
 
   darkMode() {
-      console.log("toggle mode");
       this.mode = 'Dark';
       this.changePage();
   }
