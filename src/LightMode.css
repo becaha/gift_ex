@@ -3,11 +3,13 @@
     --dark: #116661;
     --medium: #A7B8B5;
     --light: #C7D8D5;
+    --white-green: #fdfffd;
+    --blackish: #222222;
 }
 
 .btn-dark-mode {
     background-color: var(--light);
-    color: black;
+    color: var(--blackish);
 }
 
 .sidebar {
@@ -19,8 +21,12 @@
 }
 
 .nav-link {
-    color: black;
+    color: var(--blackish);
     border-bottom: var(--dark) solid;
+}
+
+.table thead th {
+    color: var(--white-green);
 }
 
 .nav-link-parent {
@@ -45,11 +51,11 @@
 }
 
 .nav-link:hover {
-    color: black;
+    color: var(--blackish);
 }
 
 .brand {
-    color: white;
+    color: var(--white-green);
 }
 
 .page {
@@ -67,13 +73,13 @@
 input {
     background-color: var(--light);
     border-color: var(--light);
-    color: black;
+    color: var(--blackish);
 }
 
 .btn-primary {
     background-color: var(--light);
     border-color: var(--light);
-    color: black;
+    color: var(--blackish);
 }
 
 .btn-primary:hover {

@@ -4,6 +4,7 @@
     --dark-mode-medium: #A7B8B5;
     --dark-mode-light: #82A19B;
     --dark-mode-med2: #6e9890;
+    --dark-mode-whitish: #fdfffd;
 }
 
 .sidebar {
@@ -45,7 +46,7 @@
 }
 
 .brand {
-    color: white;
+    color: var(--dark-mode-whitish);
 }
 
 .page {
@@ -66,6 +67,7 @@
 
 .table thead th {
     border-bottom: 2px solid var(--dark-mode-background-color);
+    color: var(--dark-mode-whitish);
 }
 
 input {

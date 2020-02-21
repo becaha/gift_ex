@@ -1,3 +1,8 @@
+:root{
+    --navbar-height: 65px;
+}
+
+
 html {
     overflow: auto;
 }
@@ -13,13 +18,19 @@ p {
     margin: 0;
 }
 
+.navbar {
+    position: sticky;
+    top: 0;
+    height: var(--navbar-height);
+}
+
 .sidebar {
     width: 20%;
 }
 
 .sidebar-content {
     position: sticky;
-    top: 0;
+    top: var(--navbar-height);
 }
 
 .no-link:hover {
