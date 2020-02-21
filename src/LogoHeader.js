@@ -7,7 +7,7 @@ export class LogoHeader extends React.Component {
         const imagestyle = {height:"30px",margin:"10px"}
         return <Navbar className="navbar" expand="lg">
             <img src={MainLogo} style={imagestyle}/>
-            <Navbar.Brand><p className="brand" >GiftEx</p></Navbar.Brand>
+            <Navbar.Brand onClick={this.props.setGroupPage}><p className="brand" >GiftEx</p></Navbar.Brand>
         </Navbar>;
     }
 }

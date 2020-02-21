@@ -24,6 +24,10 @@ p {
     height: var(--navbar-height);
 }
 
+.navbar-brand {
+    cursor: pointer;
+}
+
 .sidebar {
     width: 20%;
 }

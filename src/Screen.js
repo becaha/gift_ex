@@ -3,6 +3,9 @@ import Nav from "react-bootstrap/Nav";
 import {Router} from "./Router";
 import {GroupExchange} from "./GroupExchange";
 import {Wishlist} from "./Wishlist";
+import Navbar from "react-bootstrap/Navbar";
+import MainLogo from "./assets/gift_icon_W.png";
+import {LogoHeader} from "./LogoHeader";
 
 export class Screen extends React.Component {
 
@@ -20,6 +23,7 @@ export class Screen extends React.Component {
         console.log('screen set members', newMembers);
         this.setState({members: newMembers});
     }
+
     setWishLists(newList){
         var nlist = this.state.list;
         nlist[this.person] = newList;
@@ -43,6 +47,7 @@ export class Screen extends React.Component {
 
     render() {
         console.log('Screen render', this.state.members);
+        const imagestyle = {height:"30px",margin:"10px"}
         const navLinks = this.state.members.map(member => {
             return (
                 <Nav.Link className="nav-link-child" onClick={(e) => this.setWishlistPage(e, member)}>
@@ -50,7 +55,9 @@ export class Screen extends React.Component {
                 </Nav.Link>
             )
         });
-        return  <div className="screen">
+        return <div>
+        <LogoHeader setGroupPage={this.setGroupPage}/>
+        <div className="screen">
                     <div className="sidebar">
                         <Nav className="flex-column sidebar-content">
                             <Nav.Link onClick={this.setGroupPage}>{this.props.groupName}</Nav.Link>
@@ -61,7 +68,8 @@ export class Screen extends React.Component {
                         </Nav>
                     </div>
                     <Router page={this.state.page} groupName={this.props.groupName} person={this.person} members={this.state.members} lists={this.props.giftLists} setMembers={(m) => this.setMembers(m)} setWishLists = {(l)=>this.setWishLists(l)}/>
-                </div>;
+                </div>
+        </div>;
 
     }
 }

@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import { LogoHeader } from './LogoHeader.js';
 import { Screen } from './Screen.js';
 import Button from "react-bootstrap/Button";
+import { LogoHeader } from "./LogoHeader";
 
 
 function App() {
@@ -46,7 +46,7 @@ export class Main extends React.Component{
 
   changePage(){
     this.setState({pageContent:(<div>
-        <LogoHeader/>
+        {/*<LogoHeader/>*/}
         <Screen groupName={this.state.groupName} members={this.state.members} giftLists={this.state.activityLists}/>
       </div>)});
   }
