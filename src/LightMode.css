@@ -1,10 +1,38 @@
 :root{
-    --background-color: #F7ffff;
+    --background-color: #fff;
+    --blackish: #222222;
+    /*green*/
     --dark: #116661;
     --medium: #A7B8B5;
     --light: #C7D8D5;
     --white-green: #fdfffd;
-    --blackish: #222222;
+    --btn-light: #A7b8b5;
+    --btn-dark: #116661;
+    /*blue*/
+    /*--dark: #01B6FC;*/
+    /*--medium: #a7e5fd;*/
+    /*--light: #F7ffff;*/
+    /*--white-green: #fff;*/
+    /*--btn-light: #a7e5fd;*/
+    /*--btn-dark: #01B6FC;*/
+}
+
+.main-heading {
+    color: var(--dark);
+}
+
+.sub-heading {
+    color: var(--dark);
+}
+
+.sub-heading {
+    font-size: 15px;
+    font-family: "Maiandra GD", serif;
+    text-align:center;
+}
+
+.styleobj {
+    color: var(--dark);
 }
 
 .btn-dark-mode {
@@ -77,14 +105,14 @@ input {
 }
 
 .btn-primary {
-    background-color: var(--light);
-    border-color: var(--light);
+    background-color: var(--btn-light);
+    border-color: var(--btn-dark);
     color: var(--blackish);
 }
 
 .btn-primary:hover {
-    background-color: var(--dark);
-    border-color: var(--dark);
+    background-color: var(--btn-dark);
+    border-color: var(--btn-dark);
 }
 
 input:hover{

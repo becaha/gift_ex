@@ -1,14 +1,37 @@
 :root{
     --dark-mode-background-color: #222222;
+    /*blue*/
+    /*--dark-mode-dark: #01B6FC;*/
+    /*--dark-mode-medium: #a7e5fd;*/
+    /*--dark-mode-light: #fff;*/
+    /*--dark-mode-med2: #fff;*/
+    /*--dark-mode-whitish: #fff;*/
+    /*--btn-light: #a7e5fd;*/
+    /*--btn-dark: #01B6FC;*/
+    /*green*/
     --dark-mode-dark: #116661;
     --dark-mode-medium: #A7B8B5;
     --dark-mode-light: #82A19B;
     --dark-mode-med2: #6e9890;
     --dark-mode-whitish: #fdfffd;
+    --btn-light: #82A19B;
+    --btn-dark: #116661;
 }
 
 .sidebar {
-    background-color: var(--dark-mode-light);
+    background-color: var(--btn-light);
+}
+
+.styleobj {
+    color: var(--dark-mode-dark);
+}
+
+.main-heading {
+    color: var(--dark-mode-dark);
+}
+
+.sub-heading {
+    color: var(--dark-mode-dark);
 }
 
 .navbar {
@@ -77,14 +100,14 @@ input {
 }
 
 .btn-primary {
-    background-color: var(--dark-mode-light);
-    border-color: var(--dark-mode-light);
+    background-color: var(--btn-light);
+    border-color: var(--btn-dark);
     color: black;
 }
 
 .btn-primary:hover {
-    background-color: var(--dark-mode-dark);
-    border-color: var(--dark-mode-dark);
+    background-color: var(--btn-dark);
+    border-color: var(--btn-dark);
 }
 
 input:hover{

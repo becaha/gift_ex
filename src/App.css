@@ -2,6 +2,49 @@
     --navbar-height: 65px;
 }
 
+.main-heading {
+    font-size: 40px;
+    font-family: "Maiandra GD", serif;
+    text-align: center;
+    margin: 30px;
+}
+
+.sub-heading {
+    font-size: 15px;
+    font-family: "Maiandra GD", serif;
+    text-align:center;
+}
+
+.styleobj {
+    padding: 40px;
+    font-family: "Maiandra GD", serif;
+    /*color: '#116661',*/
+    font-size: 30px;
+    height: 100%;
+}
+
+.liststyle {
+    list-style-type: none;
+}
+
+.itemstyleobj {
+    margin: 20px;
+    padding:5px;
+    border-width:3px;
+    border-style:solid;
+    border-radius:3px;
+    text-align:center;
+    width:150px;
+    height:150px;
+    float:left;
+    font-size:20px;
+}
+
+.img-background {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
 
 html {
     overflow: auto;

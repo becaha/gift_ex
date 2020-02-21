@@ -16,25 +16,25 @@ export default App;
 export class Main extends React.Component{
   constructor(props){
     super(props);
-    const mainheading = {
-      fontSize:'40px',
-      font: "Maiandra GD",
-      color: '#116661',
-      textAlign:'center',
-      margin: '30px'
-    }
-    const subheading={
-      fontSize:'15px',
-      font: "Maiandra GD",
-      color: '#116661',
-      textAlign:'center'
-    }
+    // const mainheading = {
+    //   fontSize:'40px',
+    //   font: "Maiandra GD",
+    //   color: '#116661',
+    //   textAlign:'center',
+    //   margin: '30px'
+    // }
+    // const subheading={
+    //   fontSize:'15px',
+    //   font: "Maiandra GD",
+    //   color: '#116661',
+    //   textAlign:'center'
+    // }
     this.mode = "Light";
     this.changePage = this.changePage.bind(this);
     this.darkMode = this.darkMode.bind(this);
       this.state = {page:'home', pageContent:(
         <div><LogoHeader/>
-        <div><p style={mainheading}>Gift Organized</p><div style = {subheading}><p >Keep All those loose documents together</p>
+        <div><p className="main-heading">Gift Organized</p><div className="sub-heading"><p >Keep All those loose documents together</p>
             <Button className="btn-login" onClick={this.changePage}>LOG IN</Button>or
             <Button className="btn-login" onClick={this.darkMode}>LOG IN in Dark Mode</Button>
         </div></div></div>),
