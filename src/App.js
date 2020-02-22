@@ -3,6 +3,10 @@ import './App.css';
 import { Screen } from './Screen.js';
 import Button from "react-bootstrap/Button";
 import { LogoHeader } from "./LogoHeader";
+import gift1 from "./assets/gift1.PNG";
+import gift2 from "./assets/gift2.PNG";
+import gift3 from "./assets/gift3.PNG";
+import confetti from "./assets/confetti.jpg";
 
 
 function App() {
@@ -16,25 +20,17 @@ export default App;
 export class Main extends React.Component{
   constructor(props){
     super(props);
-    // const mainheading = {
-    //   fontSize:'40px',
-    //   font: "Maiandra GD",
-    //   color: '#116661',
-    //   textAlign:'center',
-    //   margin: '30px'
-    // }
-    // const subheading={
-    //   fontSize:'15px',
-    //   font: "Maiandra GD",
-    //   color: '#116661',
-    //   textAlign:'center'
-    // }
     this.mode = "Light";
     this.changePage = this.changePage.bind(this);
     this.darkMode = this.darkMode.bind(this);
       this.state = {page:'home', pageContent:(
-        <div><LogoHeader/>
-        <div><p className="main-heading">Gift Organized</p><div className="sub-heading"><p >Keep All those loose documents together</p>
+        <div className="home-page">
+            {/*<LogoHeader/>*/}
+        {/*<img src={gift1} alt="bow"/>*/}
+        {/*<img src={gift2} alt="bow"/>*/}
+        {/*<img src={gift3} alt="bow"/>*/}
+        <img className="img-background" src={confetti} alt="confetti"/>
+        <div><p className="main-heading">Gift Organized</p><div className="sub-heading"><p >Keep all those loose documents together</p>
             <Button className="btn-login" onClick={this.changePage}>LOG IN</Button>or
             <Button className="btn-login" onClick={this.darkMode}>LOG IN in Dark Mode</Button>
         </div></div></div>),
@@ -46,7 +42,6 @@ export class Main extends React.Component{
 
   changePage(){
     this.setState({pageContent:(<div>
-        {/*<LogoHeader/>*/}
         <Screen groupName={this.state.groupName} members={this.state.members} giftLists={this.state.activityLists}/>
       </div>)});
   }

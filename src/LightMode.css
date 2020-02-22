@@ -2,19 +2,19 @@
     --background-color: #fff;
     --blackish: #222222;
     /*green*/
-    --dark: #116661;
-    --medium: #A7B8B5;
-    --light: #C7D8D5;
-    --white-green: #fdfffd;
-    --btn-light: #A7b8b5;
-    --btn-dark: #116661;
+    /*--dark: #116661;*/
+    /*--medium: #A7B8B5;*/
+    /*--light: #C7D8D5;*/
+    /*--white-green: #fdfffd;*/
+    /*--btn-light: #A7b8b5;*/
+    /*--btn-dark: #116661;*/
     /*blue*/
-    /*--dark: #01B6FC;*/
-    /*--medium: #a7e5fd;*/
-    /*--light: #F7ffff;*/
-    /*--white-green: #fff;*/
-    /*--btn-light: #a7e5fd;*/
-    /*--btn-dark: #01B6FC;*/
+    --dark: #01B6FC;
+    --medium: #a7e5fd;
+    --light: #F7ffff;
+    --white-green: #fff;
+    --btn-light: #a7e5fd;
+    --btn-dark: #01B6FC;
 }
 
 .main-heading {

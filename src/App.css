@@ -2,6 +2,26 @@
     --navbar-height: 65px;
 }
 
+html {
+    overflow: auto;
+}
+
+html, body, div {
+    box-sizing:border-box;
+    width: 100%;
+    font-family: "Maiandra GD", serif;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+
+.home-page {
+    background-image: url("./assets/confetti.jpg");
+}
+
 .main-heading {
     font-size: 40px;
     font-family: "Maiandra GD", serif;
@@ -44,21 +64,6 @@
     position: fixed;
     height: 100%;
     width: 100%;
-}
-
-html {
-    overflow: auto;
-}
-
-html, body, div {
-    box-sizing:border-box;
-    width: 100%;
-    font-family: "Maiandra GD", serif;
-}
-
-p {
-    padding: 0;
-    margin: 0;
 }
 
 .navbar {
