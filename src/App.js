@@ -25,15 +25,14 @@ export class Main extends React.Component{
     this.darkMode = this.darkMode.bind(this);
       this.state = {page:'home', pageContent:(
         <div className="home-page">
-            {/*<LogoHeader/>*/}
-        {/*<img src={gift1} alt="bow"/>*/}
-        {/*<img src={gift2} alt="bow"/>*/}
-        {/*<img src={gift3} alt="bow"/>*/}
-        <img className="img-background" src={confetti} alt="confetti"/>
-        <div><p className="main-heading">Gift Organized</p><div className="sub-heading"><p >Keep all those loose documents together</p>
-            <Button className="btn-login" onClick={this.changePage}>LOG IN</Button>or
-            <Button className="btn-login" onClick={this.darkMode}>LOG IN in Dark Mode</Button>
-        </div></div></div>),
+            <div className="main-heading"><p>Gift Organized</p>
+                <div className="sub-heading"><p >Keep all those loose documents together</p>
+                    <Button className="btn-login" onClick={this.changePage}>LOG IN</Button>or
+                    <Button className="btn-login" onClick={this.darkMode}>LOG IN in Dark Mode</Button>
+                </div>
+            </div>
+            <img className="img-background" src={confetti} alt="confetti"/>
+        </div>),
       members:['Sarah Jones', 'Mike Jones', 'Mo Jones'],
         groupName:"Jones Family",
       activityLists: {"Sarah Jones":["Tesla Model X","IPhone 11"],"Mike Jones":["Red Scarf","Cuff Links"]}
