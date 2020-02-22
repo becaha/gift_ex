@@ -57,9 +57,9 @@ export class Screen extends React.Component {
             )
         });
         return <div>
-            <LogoHeader setGroupPage={this.setGroupPage}/>
             <div className="screen">
                     <div className="sidebar">
+                        <LogoHeader setGroupPage={this.setGroupPage}/>
                         <Nav className="flex-column sidebar-content">
                             <Nav.Link onClick={this.setGroupPage}>{this.props.groupName}</Nav.Link>
                             <Nav.Link className="no-link">Wishlists</Nav.Link>

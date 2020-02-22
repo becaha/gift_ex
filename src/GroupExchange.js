@@ -3,6 +3,7 @@ import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
 import FormControl from "react-bootstrap/FormControl";
 import trash_icon from "./assets/trash_icon.png";
+// import trash_icon_light from "./assets/trash_icon_grey.png";
 
 export class GroupExchange extends React.Component {
     constructor(props){

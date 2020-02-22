@@ -9,7 +9,7 @@
     /*--btn-light: #A7b8b5;*/
     /*--btn-dark: #116661;*/
     /*blue*/
-    --navbar: #1d283c;
+    --navbar: #222;
     --dark: #01B6FC;
     --table-head: #a7e5fd;
     --medium: #a7e5fd;
@@ -49,6 +49,7 @@
 
 .navbar {
     background-color: var(--navbar);
+
 }
 
 .nav-link {
@@ -124,6 +125,11 @@ input {
 
 .btn-primary:hover {
     background-color: var(--btn-dark);
+    border-color: var(--btn-dark);
+}
+
+.btn-delete:hover {
+    background-color: var(--dark);
     border-color: var(--btn-dark);
 }
 

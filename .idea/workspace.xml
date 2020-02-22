@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e36b08c0-62f3-4a6b-a0b9-8f9c95a83572" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/trash_icon_grey.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/trash_icon_light.PNG" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GroupExchange.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/GroupExchange.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LightMode.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/LightMode.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LogoHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/LogoHeader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Screen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Screen.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -101,7 +102,7 @@
       <workItem from="1581830325064" duration="874000" />
       <workItem from="1582145409684" duration="3447000" />
       <workItem from="1582224271179" duration="5937000" />
-      <workItem from="1582315707887" duration="17282000" />
+      <workItem from="1582315707887" duration="18978000" />
     </task>
     <servers />
   </component>
