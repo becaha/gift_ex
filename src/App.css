@@ -24,13 +24,19 @@ p {
     position: relative;
 }
 
+.img-top-layer {
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+}
+
 .main-heading {
     width: 100%;
     padding: 40px;
     background-color: #F7ffff;
     position: absolute;
     left: 0;
-    top: 40%;
+    top: 20%;
     z-index: 1000;
     font-size: 40px;
     font-family: "Maiandra GD", serif;
@@ -123,6 +129,8 @@ p {
     padding-bottom: 1%;
     display: flex;
     flex-direction: row;
+    background-image: url("./assets/confetti.jpg");
+    background-repeat: round;
 }
 
 .main {

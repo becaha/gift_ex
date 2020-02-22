@@ -5,16 +5,19 @@
     /*--dark: #116661;*/
     /*--medium: #A7B8B5;*/
     /*--light: #C7D8D5;*/
-    /*--white-green: #fdfffd;*/
+    /*--main-letters: #fdfffd;*/
     /*--btn-light: #A7b8b5;*/
     /*--btn-dark: #116661;*/
     /*blue*/
+    --navbar: #1d283c;
     --dark: #01B6FC;
+    --table-head: #a7e5fd;
     --medium: #a7e5fd;
     --light: #F7ffff;
-    --white-green: #fff;
+    --main-letters: #222;
+    --main-letters-light: #fff;
     --btn-light: #a7e5fd;
-    --btn-dark: #01B6FC;
+    --btn-dark: #222;
 }
 
 .main-heading {
@@ -45,16 +48,16 @@
 }
 
 .navbar {
-    background-color: var(--dark);
+    background-color: var(--navbar);
 }
 
 .nav-link {
     color: var(--blackish);
-    border-bottom: var(--dark) solid;
+    border-bottom: var(--blackish) solid;
 }
 
 .table thead th {
-    color: var(--white-green);
+    color: var(--main-letters);
 }
 
 .nav-link-parent {
@@ -75,7 +78,7 @@
 
 .nav-link-child {
     background-color: var(--light);
-    border-bottom: var(--dark) solid;
+    border-bottom: var(--blackish) solid;
 }
 
 .nav-link:hover {
@@ -83,15 +86,24 @@
 }
 
 .brand {
-    color: var(--white-green);
+    color: var(--main-letters-light);
 }
 
 .page {
     background-color: var(--background-color);
 }
 
+
+.table-bordered td, .table-bordered th {
+    border: 1px solid var(--blackish);
+}
+
+.table thead th {
+    border-bottom: 2px solid var(--blackish);
+}
+
 .thead {
-    background-color: var(--dark);
+    background-color: var(--table-head);
 }
 
 .tbody {
@@ -116,5 +128,5 @@ input {
 }
 
 input:hover{
-    border-color: var(--dark);
+    border-color: var(--medium);
 }

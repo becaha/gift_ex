@@ -6,6 +6,7 @@ import {Wishlist} from "./Wishlist";
 import Navbar from "react-bootstrap/Navbar";
 import MainLogo from "./assets/gift_icon_W.png";
 import {LogoHeader} from "./LogoHeader";
+import confetti from "./assets/confetti.jpg";
 
 export class Screen extends React.Component {
 
@@ -56,8 +57,8 @@ export class Screen extends React.Component {
             )
         });
         return <div>
-        <LogoHeader setGroupPage={this.setGroupPage}/>
-        <div className="screen">
+            <LogoHeader setGroupPage={this.setGroupPage}/>
+            <div className="screen">
                     <div className="sidebar">
                         <Nav className="flex-column sidebar-content">
                             <Nav.Link onClick={this.setGroupPage}>{this.props.groupName}</Nav.Link>
@@ -68,7 +69,7 @@ export class Screen extends React.Component {
                         </Nav>
                     </div>
                     <Router page={this.state.page} groupName={this.props.groupName} person={this.person} members={this.state.members} lists={this.props.giftLists} setMembers={(m) => this.setMembers(m)} setWishLists = {(l)=>this.setWishLists(l)}/>
-                </div>
+            </div>
         </div>;
 
     }
