@@ -20,6 +20,11 @@
     --btn-dark: #222;
 }
 
+.page {
+    background-image: url("./assets/confetti.jpg");
+    background-repeat: round;
+}
+
 .main-heading {
     color: var(--dark);
 }
@@ -127,7 +132,6 @@ input {
     background-color: var(--btn-dark);
     border-color: var(--btn-dark);
 }
-
 .btn-delete:hover {
     background-color: var(--dark);
     border-color: var(--btn-dark);

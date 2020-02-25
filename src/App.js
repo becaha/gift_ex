@@ -2,10 +2,6 @@ import React from 'react';
 import './App.css';
 import { Screen } from './Screen.js';
 import Button from "react-bootstrap/Button";
-import { LogoHeader } from "./LogoHeader";
-import gift1 from "./assets/gift1.PNG";
-import gift2 from "./assets/gift2.PNG";
-import gift3 from "./assets/gift3.PNG";
 import confetti from "./assets/confetti.jpg";
 
 

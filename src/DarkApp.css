@@ -1,46 +1,66 @@
 :root{
-    --dark-mode-background-color: #222222;
-    /*blue*/
-    --dark-mode-dark: #01B6FC;
-    --dark-mode-medium: #a7e5fd;
-    --dark-mode-light: #fff;
-    --dark-mode-med2: #fff;
-    --dark-mode-whitish: #fff;
-    --btn-light: #a7e5fd;
-    --btn-dark: #01B6FC;
-    /*green*/
-    /*--dark-mode-dark: #116661;*/
-    /*--dark-mode-medium: #A7B8B5;*/
-    /*--dark-mode-light: #82A19B;*/
-    /*--dark-mode-med2: #6e9890;*/
-    /*--dark-mode-whitish: #fdfffd;*/
-    /*--btn-light: #82A19B;*/
-    /*--btn-dark: #116661;*/
+    --navbar: #222;
+    --dark: #1F1F1F;
+    --table-head: #2E2E2E;
+    /*a7e5fd*/
+    --medium: #2E2E2E;
+    /*a7e5fd*/
+    --light: #3d3d3d;
+    /*F7ffff*/
+    --lighter: #4c4c4c;
+    --lightest: #5b5b5b;
+    --main-letters: #d2d2d2;
+    --main-letters-light: #d2d2d2;
+    --btn-light: #1F1F1F;
+    --btn-dark: #2E2E2E;
+    --btn-lighter: #3d3d3d;
 }
 
-.sidebar {
-    background-color: var(--btn-light);
-}
-
-.styleobj {
-    color: var(--dark-mode-dark);
+.page {
+    background-image: url("./assets/confetti-darker.PNG");
+    background-repeat: round;
+    /*background-color: var(--dark);*/
 }
 
 .main-heading {
-    color: var(--dark-mode-dark);
+    color: var(--dark);
 }
 
 .sub-heading {
-    color: var(--dark-mode-dark);
+    color: var(--dark);
+}
+
+.sub-heading {
+    font-size: 15px;
+    font-family: "Maiandra GD", serif;
+    text-align:center;
+}
+
+.styleobj {
+    color: var(--main-letters);
+}
+
+.btn-dark-mode {
+    background-color: var(--light);
+    color: var(--main-letters);
+}
+
+.sidebar {
+    background-color: var(--medium);
 }
 
 .navbar {
-    background-color: var(--dark-mode-dark);
+    background-color: var(--navbar);
+
 }
 
 .nav-link {
-    color: black;
-    border-bottom: var(--dark-mode-dark) solid;
+    color: var(--main-letters);
+    border-bottom: var(--blackish) solid;
+}
+
+.table thead th {
+    color: var(--main-letters);
 }
 
 .nav-link-parent {
@@ -48,68 +68,82 @@
 }
 
 .nav-link:active {
-    background-color: var(--dark-mode-background-color);
+    background-color: var(--background-color);
 }
 
 .no-link:active {
-    background-color: var(--dark-mode-medium);
+    background-color: var(--medium);
 }
 
 .nav-link-parent:active {
-    background-color: var(--dark-mode-medium);
+    background-color: var(--medium);
 }
 
 .nav-link-child {
-    background-color: var(--dark-mode-med2);
-    border-bottom: var(--dark-mode-dark) solid;
+    background-color: var(--light);
+    border-bottom: var(--blackish) solid;
 }
 
 .nav-link:hover {
-    color: black;
+    color: var(--main-letters);
 }
 
 .brand {
-    color: var(--dark-mode-whitish);
+    color: var(--main-letters-light);
 }
 
 .page {
-    background-color: var(--dark-mode-background-color);
+    background-color: var(--background-color);
 }
 
-.thead {
-    background-color: var(--dark-mode-dark);
-}
-
-.tbody {
-    background-color: var(--dark-mode-light);
-}
 
 .table-bordered td, .table-bordered th {
-    border: 1px solid var(--dark-mode-background-color);
+    border: 1px solid var(--blackish);
 }
 
 .table thead th {
-    border-bottom: 2px solid var(--dark-mode-background-color);
-    color: var(--dark-mode-whitish);
+    border-bottom: 2px solid var(--blackish);
+}
+
+.thead {
+    color: var(--main-letters);
+    background-color: var(--table-head);
+}
+
+.tbody {
+    color: var(--main-letters);
+    background-color: var(--light);
 }
 
 input {
-    background-color: var(--dark-mode-light);
-    border-color: var(--dark-mode-light);
-    color: black;
+    background-color: var(--light);
+    border-color: var(--light);
+    color: var(--main-letters);
 }
 
 .btn-primary {
     background-color: var(--btn-light);
     border-color: var(--btn-dark);
-    color: black;
+    color: var(--main-letters);
 }
 
 .btn-primary:hover {
     background-color: var(--btn-dark);
     border-color: var(--btn-dark);
 }
+.btn-delete:hover {
+    background-color: var(--dark);
+    border-color: var(--btn-dark);
+}
 
 input:hover{
-    border-color: var(--dark-mode-dark);
+    border-color: var(--medium);
+}
+
+.btn-table {
+    background-color: var(--lighter);
+}
+
+.btn-table:hover {
+    background-color: var(--lightest);
 }
