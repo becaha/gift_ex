@@ -20,12 +20,9 @@
     --btn-dark: #222;
 }
 
-.main-heading {
-    color: var(--dark);
-}
-
-.sub-heading {
-    color: var(--dark);
+.page {
+    background-image: url("./assets/confetti.jpg");
+    background-repeat: round;
 }
 
 .sub-heading {
@@ -128,7 +125,17 @@ input {
     border-color: var(--btn-dark);
 }
 
+.btn-primary:active {
+    background-color: var(--btn-dark) !important;
+    border-color: var(--btn-dark) !important;
+}
+
 .btn-delete:hover {
+    background-color: var(--dark);
+    border-color: var(--btn-dark);
+}
+
+.btn-delete:active {
     background-color: var(--dark);
     border-color: var(--btn-dark);
 }

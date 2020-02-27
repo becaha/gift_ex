@@ -2,10 +2,6 @@ import React from 'react';
 import './App.css';
 import { Screen } from './Screen.js';
 import Button from "react-bootstrap/Button";
-import { LogoHeader } from "./LogoHeader";
-import gift1 from "./assets/gift1.PNG";
-import gift2 from "./assets/gift2.PNG";
-import gift3 from "./assets/gift3.PNG";
 import confetti from "./assets/confetti.jpg";
 
 
@@ -25,10 +21,12 @@ export class Main extends React.Component{
     this.darkMode = this.darkMode.bind(this);
       this.state = {page:'home', pageContent:(
         <div className="home-page">
-            <div className="main-heading"><p>Gift Organized</p>
-                <div className="sub-heading"><p >Keep all those loose documents together</p>
-                    <Button className="btn-login" onClick={this.changePage}>LOG IN</Button>or
-                    <Button className="btn-login" onClick={this.darkMode}>LOG IN in Dark Mode</Button>
+            <div className="main-heading"><p>GiftEx</p>
+                <div className="sub-heading"><p >You focus on the gift, and we'll take care of the exchange</p>
+                    <div className="btns-login">
+                        <Button className="btn-login" onClick={this.changePage}>LOG IN</Button>or
+                        <Button className="btn-login" onClick={this.darkMode}>LOG IN in Dark Mode</Button>
+                    </div>
                 </div>
             </div>
             <img className="img-background" src={confetti} alt="confetti"/>
