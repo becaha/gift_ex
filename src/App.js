@@ -35,7 +35,7 @@ export class Main extends React.Component{
         </div>),
       members:['Sarah Jones', 'Mike Jones', 'Mo Jones'],
         groupName:"Jones Family",
-      activityLists: {"Sarah Jones":["Tesla Model X","IPhone 11"],"Mike Jones":["Red Scarf","Cuff Links"]}
+      activityLists: {"Sarah Jones":["Tesla Model X","IPhone 11","ITunes Gift Card","Roomba","Apple wireless charger"],"Mike Jones":["Red Scarf","Cuff Links","20oz Hip Flask","Small Oak Barrel","Top Hat"]}
     };
   }
 
