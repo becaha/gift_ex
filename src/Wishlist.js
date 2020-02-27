@@ -34,18 +34,11 @@ export class Wishlist extends React.Component {
 
         const wishlistitems =this.state.list ? this.state.list.map((wish)=><WishItem item = {wish} deleteOne = {(l)=>this.deleteOne(l)}/>):null;
         return (
-<<<<<<< HEAD
             <div className="page page-main main">
                 <Table bordered><thead className="thead"><tr><td>{this.props.person}</td></tr></thead>
                     <tbody className="tbody">
                     {wishlistitems}</tbody></Table>
                 <div className="itemstyleobj">
-=======
-            <div className="styleobj page">
-                <div>{this.props.person}</div>
-                <ul>{wishlistitems}
-                <li className="liststyle"><div className="itemstyleobj">
->>>>>>> e9136e72d35a890b992ade1467e6d47b0ccdb788
                     <p/>
                         <FormControl placeholder="Item"
                             aria-label="Member Name"
