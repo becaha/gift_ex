@@ -21,10 +21,12 @@ export class Main extends React.Component{
     this.darkMode = this.darkMode.bind(this);
       this.state = {page:'home', pageContent:(
         <div className="home-page">
-            <div className="main-heading"><p>Gift Organized</p>
-                <div className="sub-heading"><p >Keep all those loose documents together</p>
-                    <Button className="btn-login" onClick={this.changePage}>LOG IN</Button>or
-                    <Button className="btn-login" onClick={this.darkMode}>LOG IN in Dark Mode</Button>
+            <div className="main-heading"><p>GiftEx</p>
+                <div className="sub-heading"><p >You focus on the gift, and we'll take care of the exchange</p>
+                    <div className="btns-login">
+                        <Button className="btn-login" onClick={this.changePage}>LOG IN</Button>or
+                        <Button className="btn-login" onClick={this.darkMode}>LOG IN in Dark Mode</Button>
+                    </div>
                 </div>
             </div>
             <img className="img-background" src={confetti} alt="confetti"/>

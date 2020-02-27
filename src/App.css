@@ -38,16 +38,16 @@ p {
     left: 0;
     top: 20%;
     z-index: 1000;
-    font-size: 40px;
+    font-size: 60px;
     font-family: "Maiandra GD", serif;
     text-align: center;
-    color: #247ec4;
+    color: #222222;
 }
 
 .sub-heading {
-    color: #247ec4;
-    padding-top: 20px;
-    font-size: 15px;
+    color: #222222;
+    padding-top: 10px;
+    font-size: 25px;
     font-family: "Maiandra GD", serif;
     text-align:center;
 }
@@ -186,4 +186,24 @@ input {
 
 .icon {
     width: 35%;
+}
+
+.btns-login {
+    margin-top: 40px;
+    padding-top: 10px;
+    font-size: 15px;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-footer {
+    height: 50px;
+    border-top: none;
+}
+
+.btn-modal {
+    margin: 0;
+    margin-bottom: 15px;
 }

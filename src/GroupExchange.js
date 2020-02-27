@@ -160,7 +160,7 @@ export class GroupExchange extends React.Component {
                             />
                         </Modal.Body>
                         <Modal.Footer>
-                            <Button variant="primary" onClick={this.handleNewMember}>
+                            <Button className="btn-modal" onClick={this.handleNewMember}>
                                 Add
                             </Button>
                         </Modal.Footer>
