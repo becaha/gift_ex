@@ -175,6 +175,10 @@ input {
     font-family: sans-serif;
 }
 
+.btn-input {
+
+}
+
 .btn:focus, input:focus {
     box-shadow: none  !important;
 }

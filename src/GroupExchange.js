@@ -1,6 +1,7 @@
 import React from 'react';
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
 import FormControl from "react-bootstrap/FormControl";
 import trash_icon from "./assets/trash_icon.png";
 // import trash_icon_light from "./assets/trash_icon_grey.png";
@@ -10,11 +11,9 @@ export class GroupExchange extends React.Component {
         super(props);
         console.log(props.members);
         this.members = props.members;
-        this.state = {year: 2020, memberForm: null, members: props.members};
+        this.state = {year: 2020, memberForm: null, members: props.members, show: false};
         this.nextYear = this.nextYear.bind(this);
         this.prevYear = this.prevYear.bind(this);
-        this.closeMemberForm = this.closeMemberForm.bind(this);
-        this.openMemberForm = this.openMemberForm.bind(this);
         this.handleNewMember = this.handleNewMember.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.deleteMember = this.deleteMember.bind(this);
@@ -22,6 +21,8 @@ export class GroupExchange extends React.Component {
         this.exchangeIndex = 1;
         this.newMember = null;
         this.setMembers = this.setMembers.bind(this);
+        this.handleShow = this.handleShow.bind(this);
+        this.handleClose = this.handleClose.bind(this);
     }
 
     setMembers(newMembers) {
@@ -44,32 +45,14 @@ export class GroupExchange extends React.Component {
         this.setState({year: this.state.year - 1});
     }
 
-    closeMemberForm() {
-        this.setState({memberForm: null});
-    }
-
-    openMemberForm() {
-        if (this.state.memberForm === null) {
-            this.setState({memberForm: (<div>
-                    <FormControl
-                placeholder="Member Name"
-                aria-label="Member Name"
-                aria-describedby="basic-addon1"
-                onChange={e => this.handleChange(e)}
-            />
-            <Button onClick={this.handleNewMember}>></Button>
-            </div>)});
-        }
-    }
-
     handleChange(event) {
         this.newMember = event.target.value;
     }
 
     handleNewMember() {
+        this.handleClose();
         this.state.members.push(this.newMember);
         this.newMember = null;
-        this.closeMemberForm();
         this.setMembers(this.state.members);
     }
 
@@ -93,6 +76,16 @@ export class GroupExchange extends React.Component {
         });
         return memberAssignments;
     }
+
+    handleClose() {
+        this.setState({show: false});
+    }
+
+    handleShow() {
+        console.log('show');
+        this.setState({show: true});
+    }
+
 
     render() {
         console.log('Group render', this.state.members);
@@ -134,8 +127,6 @@ export class GroupExchange extends React.Component {
             <div className="sidebar-right">
                 <Button onClick={this.prevYear}>Previous Year</Button>
                 <Button onClick={this.nextYear}>Next Year</Button>
-                {/*<Button>Add Member</Button>*/}
-                {/*<Button>Delete Member</Button>*/}
             </div>
 
         </div>
@@ -155,7 +146,25 @@ export class GroupExchange extends React.Component {
                 </Table>
                 </div>
                 <div className="sidebar-right">
-                    <Button onClick={this.openMemberForm}>Add Member {this.state.memberForm}</Button>
+                    <Button onClick={this.handleShow}>Add Member</Button>
+                    <Modal show={this.state.show} onHide={this.handleClose}>
+                        <Modal.Header closeButton>
+                            <Modal.Title>New Member</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                            <FormControl
+                                placeholder="Member Name"
+                                aria-label="Member Name"
+                                aria-describedby="basic-addon1"
+                                onChange={e => this.handleChange(e)}
+                            />
+                        </Modal.Body>
+                        <Modal.Footer>
+                            <Button variant="primary" onClick={this.handleNewMember}>
+                                Add
+                            </Button>
+                        </Modal.Footer>
+                    </Modal>
                 </div>
             </div>
             </div>;
