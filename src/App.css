@@ -33,7 +33,7 @@ p {
 .main-heading {
     width: 100%;
     padding: 40px;
-    background-color: #F7ffff;
+    background-color: #e5f9ffeb;
     position: absolute;
     left: 0;
     top: 20%;
@@ -41,10 +41,11 @@ p {
     font-size: 40px;
     font-family: "Maiandra GD", serif;
     text-align: center;
-    /*margin: 30px;*/
+    color: #247ec4;
 }
 
 .sub-heading {
+    color: #247ec4;
     padding-top: 20px;
     font-size: 15px;
     font-family: "Maiandra GD", serif;
@@ -186,4 +187,3 @@ input {
 .icon {
     width: 35%;
 }
-

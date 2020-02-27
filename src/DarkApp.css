@@ -9,8 +9,8 @@
     /*F7ffff*/
     --lighter: #4c4c4c;
     --lightest: #5b5b5b;
-    --main-letters: #d2d2d2;
-    --main-letters-light: #d2d2d2;
+    --main-letters: #EDEDED;
+    --main-letters-light: #EDEDED;
     --btn-light: #1F1F1F;
     --btn-dark: #2E2E2E;
     --btn-lighter: #3d3d3d;
@@ -131,6 +131,7 @@ input {
     background-color: var(--btn-dark);
     border-color: var(--btn-dark);
 }
+
 .btn-delete:hover {
     background-color: var(--dark);
     border-color: var(--btn-dark);
