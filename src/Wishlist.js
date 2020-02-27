@@ -24,7 +24,7 @@ export class Wishlist extends React.Component {
 
         const wishlistitems =this.state.list ? this.state.list.map((wish)=><li className="liststyle"><WishItem item = {wish}/></li>):null;
         return (
-            <div className="styleobj">
+            <div className="styleobj page">
                 <div>{this.props.person}</div>
                 <ul>{wishlistitems}
                 <li className="liststyle"><div className="itemstyleobj">
