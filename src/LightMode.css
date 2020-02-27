@@ -124,7 +124,18 @@ input {
     background-color: var(--btn-dark);
     border-color: var(--btn-dark);
 }
+
+.btn-primary:active {
+    background-color: var(--btn-dark) !important;
+    border-color: var(--btn-dark) !important;
+}
+
 .btn-delete:hover {
+    background-color: var(--dark);
+    border-color: var(--btn-dark);
+}
+
+.btn-delete:active {
     background-color: var(--dark);
     border-color: var(--btn-dark);
 }
