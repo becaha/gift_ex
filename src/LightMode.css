@@ -25,12 +25,6 @@
     background-repeat: round;
 }
 
-.sub-heading {
-    font-size: 15px;
-    font-family: "Maiandra GD", serif;
-    text-align:center;
-}
-
 .styleobj {
     color: var(--dark);
 }
