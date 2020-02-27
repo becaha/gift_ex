@@ -3,21 +3,20 @@ import Nav from "react-bootstrap/Nav";
 import {Router} from "./Router";
 import {GroupExchange} from "./GroupExchange";
 import {Wishlist} from "./Wishlist";
-import Navbar from "react-bootstrap/Navbar";
-import MainLogo from "./assets/gift_icon_W.png";
 import {LogoHeader} from "./LogoHeader";
-import confetti from "./assets/confetti.jpg";
+import dropdown from "./assets/dropdown.png";
 
 export class Screen extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {page: 'GroupExchange', members: props.members,list:this.props.giftLists};
+        this.state = {page: 'GroupExchange', members: props.members,list:this.props.giftLists, showWishlists: true};
         this.setWishlistPage = this.setWishlistPage.bind(this);
         this.setGroupPage = this.setGroupPage.bind(this);
         this.setMembers = this.setMembers.bind(this);
         this.setWishLists = this.setWishLists.bind(this);
         this.person = null;
+        this.toggleWishlists = this.toggleWishlists.bind(this);
     }
 
     setMembers(newMembers) {
@@ -46,23 +45,31 @@ export class Screen extends React.Component {
         this.person = name
     }
 
+    toggleWishlists() {
+        console.log("toggle wishlists", this.state.showWishlists);
+        this.setState({showWishlists: !this.state.showWishlists});
+    }
+
     render() {
         console.log('Screen render', this.state.members);
         const imagestyle = {height:"30px",margin:"10px"}
-        const navLinks = this.state.members.map(member => {
+        let navLinks = this.state.members.map(member => {
             return (
                 <Nav.Link className="nav-link-child" onClick={(e) => this.setWishlistPage(e, member)}>
                     {member}
                 </Nav.Link>
             )
         });
+        if (this.state.showWishlists == false) {
+            navLinks = null;
+        }
         return <div>
             <div className="screen">
                     <div className="sidebar">
                         <LogoHeader setGroupPage={this.setGroupPage}/>
                         <Nav className="flex-column sidebar-content">
                             <Nav.Link onClick={this.setGroupPage}>{this.props.groupName}</Nav.Link>
-                            <Nav.Link className="no-link">Wishlists</Nav.Link>
+                            <Nav.Link onClick={this.toggleWishlists}>Wishlists <img className="btn-dropdown" src={dropdown}/></Nav.Link>
                             <Nav.Link className="nav-link-parent" style={{paddingTop: 0, paddingBottom: 0, paddingRight: 0}}>
                                 {navLinks}
                             </Nav.Link>

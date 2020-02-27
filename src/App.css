@@ -103,10 +103,6 @@ p {
     top: var(--navbar-height);
 }
 
-.no-link:hover {
-    cursor: default;
-}
-
 .nav-link-parent {
     padding-left: 0;
 }
@@ -206,4 +202,11 @@ input {
 .btn-modal {
     margin: 0;
     margin-bottom: 15px;
+}
+
+.btn-dropdown {
+    height: 20px;
+    width: 20px;
+    float: right;
+    margin-top: 3px;
 }
