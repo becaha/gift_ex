@@ -61,8 +61,8 @@ export class Wishlist extends React.Component {
                         </Modal.Header>
                         <Modal.Body>
                             <FormControl
-                                placeholder="Member Name"
-                                aria-label="Member Name"
+                                placeholder="New Item"
+                                aria-label="New Item"
                                 aria-describedby="basic-addon1"
                                 onChange={e => this.handleChange(e)}
                             />
