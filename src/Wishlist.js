@@ -32,11 +32,13 @@ export class Wishlist extends React.Component {
         this.props.setWishLists(this.state.list);
     }
     deleteOne(item){
+        console.log(item);
         let updatedItems = this.state.list.filter(oneItem =>
             item !== oneItem
          );
-         console.log(updatedItems,item);
-         this.setState({list:updatedItems, newitem:null})
+         console.log(updatedItems);
+         this.setState({list: updatedItems, newitem:null});
+         console.log("deleted", this.state.list);
          this.props.setWishLists(updatedItems);
     }
     render() {
