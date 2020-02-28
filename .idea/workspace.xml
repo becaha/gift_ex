@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e36b08c0-62f3-4a6b-a0b9-8f9c95a83572" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/gift_icon_W.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DarkApp.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/DarkApp.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LightMode.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/LightMode.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Wishlist.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Wishlist.js" afterDir="false" />
     </list>
@@ -46,6 +40,9 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2019.2.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
@@ -112,7 +109,8 @@
       <workItem from="1582765972634" duration="1768000" />
       <workItem from="1582770164775" duration="215000" />
       <workItem from="1582817185561" duration="2778000" />
-      <workItem from="1582830187710" duration="4639000" />
+      <workItem from="1582830187710" duration="4871000" />
+      <workItem from="1582917038981" duration="1879000" />
     </task>
     <servers />
   </component>

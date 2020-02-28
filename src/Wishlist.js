@@ -48,12 +48,12 @@ export class Wishlist extends React.Component {
         const wishlistitems =this.props.list ? this.props.list.map((wish)=><WishItem id = {wish} item = {wish} deleteOne = {(l)=>this.deleteOne(l)}/>):null;
         const style2 = {position:'fixed',right:"30px",width:"15%"}
         return (
-            <div className="page page-main main" >
-                <div style = {style}>
+            <div className="page page-main" >
+                <div className="main">
                 <Table bordered ><thead className="thead table-title"><tr><td>{this.props.person}</td></tr></thead>
                     <tbody className="tbody">
                     {wishlistitems}</tbody></Table></div>
-                <div className="sidebar-right" style={style2}>
+                <div className="sidebar-right">
                     <Button onClick={this.handleShow}>Add</Button>
                     <Modal show={this.state.show} onHide={this.handleClose}>
                         <Modal.Header closeButton>

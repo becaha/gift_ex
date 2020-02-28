@@ -57,7 +57,7 @@
 }
 
 .nav-link:active {
-    background-color: var(--background-color);
+    background-color: var(--medium);
 }
 
 .no-link:active {
@@ -66,6 +66,15 @@
 
 .nav-link-parent:active {
     background-color: var(--medium);
+}
+
+.nav-link-child {
+    background-color: var(--light);
+    border-bottom: var(--blackish) solid;
+}
+
+.nav-link-child:active {
+    background-color: var(--light);
 }
 
 .nav-link-child {
