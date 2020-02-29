@@ -27,9 +27,13 @@ export class Wishlist extends React.Component {
     }
     addtoList(){
         this.handleClose();
-        this.state.list.push(this.state.newitem);
-        this.setState({newitem:null})
-        this.props.setWishLists(this.state.list);
+        var newlist = this.state.list
+        if(newlist == null){
+            newlist=[this.state.newitem]
+        }
+        else newlist.push(this.state.newitem);
+        this.setState({list:newlist,newitem:null})
+        this.props.setWishLists(newlist);
     }
     deleteOne(item){
         console.log(item);
@@ -49,7 +53,7 @@ export class Wishlist extends React.Component {
         const style2 = {position:'fixed',right:"30px",width:"15%"}
         return (
             <div className="page page-main" >
-                <div className="main">
+                <div className="main" style ={style}>
                 <Table bordered ><thead className="thead table-title"><tr><td>{this.props.person}</td></tr></thead>
                     <tbody className="tbody">
                     {wishlistitems}</tbody></Table></div>
