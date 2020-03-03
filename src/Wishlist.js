@@ -48,11 +48,10 @@ export class Wishlist extends React.Component {
     render() {
         if(this.props.list !== this.state.list){
             this.setState({list:this.props.list, newitem:null})}
-        const style = {minHeight : window.innerHeight,width:"80%"}
+        const style = {minHeight : window.innerHeight};
         const wishlistitems =this.props.list ? this.props.list.map((wish)=><WishItem id = {wish} item = {wish} deleteOne = {(l)=>this.deleteOne(l)}/>):null;
-        const style2 = {position:'fixed',right:"30px",width:"15%"}
         return (
-            <div className="page page-main" >
+            <div className="page background page-main" >
                 <div className="main" style ={style}>
                 <Table bordered ><thead className="thead table-title"><tr><td>{this.props.person}</td></tr></thead>
                     <tbody className="tbody">

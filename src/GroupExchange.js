@@ -88,6 +88,8 @@ export class GroupExchange extends React.Component {
 
 
     render() {
+        const style = {minHeight : window.innerHeight};
+
         console.log('Group render', this.state.members);
 
         const memberAssignments = this.createAssignments();
@@ -104,7 +106,7 @@ export class GroupExchange extends React.Component {
             )
         });
 
-        return <div>
+        return <div className="background" style={style}>
             <div className="page page-main">
             <div className="main">
                 <Table bordered>

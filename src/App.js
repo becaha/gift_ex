@@ -33,7 +33,9 @@ export class Main extends React.Component{
         </div>),
       members:['Sarah Jones', 'Mike Jones', 'Mo Jones'],
         groupName:"Jones Family",
-      activityLists: {"Sarah Jones":["Tesla Model X","IPhone 11","ITunes Gift Card","Smart LED Bulbs - Alexa connectable","Fully Automatic Cat Feeder","Roomba","good smelling candles","Elegent couch cushions","Apple wireless charger","Blackout Curtains for a standard sized window"],"Mike Jones":["Red Scarf","Cuff Links","20oz Hip Flask","Small Oak Barrel","Top Hat"]}
+      activityLists: {"Sarah Jones":["Tesla Model X","IPhone 11","ITunes Gift Card","Smart LED Bulbs - Alexa connectable","Fully Automatic Cat Feeder","Roomba","good smelling candles","Elegent couch cushions","Apple wireless charger","Blackout Curtains for a standard sized window"],
+          "Mike Jones":["Red Scarf","Cuff Links","20oz Hip Flask","Small Oak Barrel","Top Hat", "Television", "Teddy bear"],
+            "Mo Jones": ["Christmas tree", "Christmas lights", "T-shirts", "Yoga ball", "Gym pass", "Candy", "In-n-out", "Gift cards"]}
     };
   }
 
