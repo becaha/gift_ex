@@ -24,20 +24,6 @@
 
 .page{}
 
-.main-heading {
-    color: var(--dark);
-}
-
-.sub-heading {
-    color: var(--dark);
-}
-
-.sub-heading {
-    font-size: 15px;
-    font-family: "Maiandra GD", serif;
-    text-align:center;
-}
-
 .styleobj {
     color: var(--main-letters);
 }
