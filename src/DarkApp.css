@@ -1,19 +1,20 @@
 :root{
-    --navbar: #222;
-    --dark: #1F1F1F;
-    --table-head: #2E2E2E;
+    --dark-blackish: #222;
+    --dark-navbar: #222;
+    --dark-dark: #1F1F1F;
+    --dark-table-head: #2E2E2E;
     /*a7e5fd*/
-    --medium: #2E2E2E;
+    --dark-medium: #2E2E2E;
     /*a7e5fd*/
-    --light: #3d3d3d;
+    --dark-light: #3d3d3d;
     /*F7ffff*/
-    --lighter: #4c4c4c;
-    --lightest: #5b5b5b;
-    --main-letters: #EDEDED;
-    --main-letters-light: #EDEDED;
-    --btn-light: #1F1F1F;
-    --btn-dark: #2E2E2E;
-    --btn-lighter: #3d3d3d;
+    --dark-lighter: #4c4c4c;
+    --dark-lightest: #5b5b5b;
+    --dark-main-letters: #EDEDED;
+    --dark-main-letters-light: #EDEDED;
+    --dark-btn-light: #1F1F1F;
+    --dark-btn-dark: #2E2E2E;
+    --dark-btn-lighter: #3d3d3d;
 }
 
 .background {
@@ -24,30 +25,30 @@
 .page{}
 
 .styleobj {
-    color: var(--main-letters);
+    color: var(--dark-main-letters);
 }
 
 .btn-dark-mode {
-    background-color: var(--light);
-    color: var(--main-letters);
+    background-color: var(--dark-light);
+    color: var(--dark-main-letters);
 }
 
 .sidebar {
-    background-color: var(--medium);
+    background-color: var(--dark-medium);
 }
 
 .navbar {
-    background-color: var(--navbar);
+    background-color: var(--dark-navbar);
 
 }
 
 .nav-link {
-    color: var(--main-letters);
-    border-bottom: var(--blackish) solid;
+    color: var(--dark-main-letters);
+    border-bottom: var(--dark-blackish) solid;
 }
 
 .table thead th {
-    color: var(--main-letters);
+    color: var(--dark-main-letters);
 }
 
 .nav-link-parent {
@@ -55,92 +56,92 @@
 }
 
 .nav-link:active {
-    background-color: var(--medium);
+    background-color: var(--dark-medium);
 }
 
 .no-link:active {
-    background-color: var(--medium);
+    background-color: var(--dark-medium);
 }
 
 .nav-link-parent:active {
-    background-color: var(--medium);
+    background-color: var(--dark-medium);
 }
 
 .nav-link-child {
-    background-color: var(--light);
-    border-bottom: var(--blackish) solid;
+    background-color: var(--dark-light);
+    border-bottom: var(--dark-blackish) solid;
 }
 
 .nav-link-child:active {
-    background-color: var(--light);
+    background-color: var(--dark-light);
 }
 
 .nav-link:hover {
-    color: var(--main-letters);
+    color: var(--dark-main-letters);
 }
 
 .brand {
-    color: var(--main-letters-light);
+    color: var(--dark-main-letters-light);
 }
 
 .table-bordered td, .table-bordered th {
-    border: 1px solid var(--blackish);
+    border: 1px solid var(--dark-blackish);
 }
 
 .table thead th {
-    border-bottom: 2px solid var(--blackish);
+    border-bottom: 2px solid var(--dark-blackish);
 }
 
 .thead {
-    color: var(--main-letters);
-    background-color: var(--table-head);
+    color: var(--dark-main-letters);
+    background-color: var(--dark-table-head);
 }
 
 .tbody {
-    color: var(--main-letters);
-    background-color: var(--light);
+    color: var(--dark-main-letters);
+    background-color: var(--dark-light);
 }
 
 input {
-    background-color: var(--light);
-    border-color: var(--light);
-    color: var(--main-letters);
+    background-color: var(--dark-light);
+    border-color: var(--dark-light);
+    color: var(--dark-main-letters);
 }
 
 .btn-primary {
-    background-color: var(--btn-light);
-    border-color: var(--btn-dark);
-    color: var(--main-letters);
+    background-color: var(--dark-btn-light);
+    border-color: var(--dark-btn-dark);
+    color: var(--dark-main-letters);
 }
 
 .btn-primary:hover {
-    background-color: var(--btn-dark);
-    border-color: var(--btn-dark);
+    background-color: var(--dark-btn-dark);
+    border-color: var(--dark-btn-dark);
 }
 
 .btn-delete:hover {
-    background-color: var(--dark);
-    border-color: var(--btn-dark);
+    background-color: var(--dark-dark);
+    border-color: var(--dark-btn-dark);
 }
 
 .btn-primary:active {
-    background-color: var(--btn-dark);
-    border-color: var(--btn-dark);
+    background-color: var(--dark-btn-dark);
+    border-color: var(--dark-btn-dark);
 }
 
 .btn-delete:active {
-    background-color: var(--dark);
-    border-color: var(--btn-dark);
+    background-color: var(--dark-dark);
+    border-color: var(--dark-btn-dark);
 }
 
 input:hover{
-    border-color: var(--medium);
+    border-color: var(--dark-medium);
 }
 
 .btn-table {
-    background-color: var(--lighter);
+    background-color: var(--dark-lighter);
 }
 
 .btn-table:hover {
-    background-color: var(--lightest);
+    background-color: var(--dark-lightest);
 }

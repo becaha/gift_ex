@@ -19,6 +19,7 @@ export class Main extends React.Component{
     this.mode = null;
     this.changePage = this.changePage.bind(this);
     this.darkMode = this.darkMode.bind(this);
+    this.lightMode = this.lightMode.bind(this);
       this.state = {page:'home', pageContent:(
         <div className="home-page">
             <div className="main-heading"><p>GiftEx</p>
