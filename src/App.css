@@ -1,5 +1,8 @@
 :root{
     --navbar-height: 65px;
+    --blackish: #222222;
+    --btn-light: #a7e5fd;
+    --btn-dark: #222;
 }
 
 html {
@@ -210,3 +213,20 @@ input {
     float: right;
     margin-top: 3px;
 }
+
+.btn-primary {
+    background-color: var(--btn-light);
+    border-color: var(--btn-dark);
+    color: var(--blackish);
+}
+
+.btn-primary:hover {
+    background-color: var(--btn-dark);
+    border-color: var(--btn-dark);
+}
+
+.btn-primary:active {
+    background-color: var(--btn-dark) !important;
+    border-color: var(--btn-dark) !important;
+}
+

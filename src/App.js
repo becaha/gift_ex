@@ -16,7 +16,7 @@ export default App;
 export class Main extends React.Component{
   constructor(props){
     super(props);
-    this.mode = "Light";
+    this.mode = null;
     this.changePage = this.changePage.bind(this);
     this.darkMode = this.darkMode.bind(this);
       this.state = {page:'home', pageContent:(
@@ -24,7 +24,7 @@ export class Main extends React.Component{
             <div className="main-heading"><p>GiftEx</p>
                 <div className="sub-heading"><p >You focus on the gift, and we'll take care of the exchange</p>
                     <div className="btns-login">
-                        <Button className="btn-login" onClick={this.changePage}>LOG IN</Button>or
+                        <Button className="btn-login" onClick={this.lightMode}>LOG IN</Button>or
                         <Button className="btn-login" onClick={this.darkMode}>LOG IN in Dark Mode</Button>
                     </div>
                 </div>
@@ -50,13 +50,18 @@ export class Main extends React.Component{
       this.changePage();
   }
 
+  lightMode() {
+      this.mode = 'Light';
+      this.changePage();
+  }
+
   render(){
       console.log("app render");
     if(this.mode === 'Dark') {
         console.log("dark");
       require('./DarkApp.css');
     }
-    else {
+    else if(this.mode === 'Light') {
         console.log("light");
       require('./LightMode.css');
     }
