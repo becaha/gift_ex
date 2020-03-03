@@ -19,7 +19,6 @@
 .background {
     background-image: url("./assets/confetti-darker.PNG");
     background-repeat: round;
-    /*background-color: var(--dark);*/
 }
 
 .page{}

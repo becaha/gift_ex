@@ -53,9 +53,11 @@ export class Main extends React.Component{
   render(){
       console.log("app render");
     if(this.mode === 'Dark') {
+        console.log("dark");
       require('./DarkApp.css');
     }
     else {
+        console.log("light");
       require('./LightMode.css');
     }
     return (
